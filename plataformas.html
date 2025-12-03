@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plataforma PGE — Portfólio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0a0f17;
+      --fg: #e8edf5;
+      --muted: #9fb3c8;
+      --primary: #22c55e;
+      --secondary: #3b82f6;
+      --card: rgba(255, 255, 255, 0.04);
+      --border: rgba(255, 255, 255, 0.08);
+      --glow: rgba(59, 130, 246, 0.4);
+      --accent: #8be1ff;
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: 'Space Grotesk', system-ui, -apple-system, sans-serif;
+      background: radial-gradient(120% 160% at 12% 18%, rgba(34,197,94,0.10), transparent 40%),
+                  radial-gradient(110% 150% at 78% 12%, rgba(59,130,246,0.12), transparent 45%),
+                  radial-gradient(90% 130% at 60% 82%, rgba(139,225,255,0.08), transparent 50%),
+                  var(--bg);
+      color: var(--fg);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    header {
+      padding: 72px 7vw 48px;
+      position: relative;
+    }
+
+    .orb {
+      position: absolute;
+      width: 240px;
+      height: 240px;
+      border-radius: 50%;
+      filter: blur(80px);
+      opacity: 0.65;
+      animation: drift 24s ease-in-out infinite alternate;
+      pointer-events: none;
+    }
+    .orb.one { background: var(--glow); top: -30px; left: -70px; }
+    .orb.two { background: rgba(34,197,94,0.35); top: 10px; right: 10%; animation-duration: 30s; }
+
+    @keyframes drift {
+      0% { transform: translate3d(0,0,0) scale(1); }
+      100% { transform: translate3d(20px, -10px, 0) scale(1.08); }
+    }
+
+    h1, h2, h3 { margin: 0; letter-spacing: -0.4px; }
+    h1 { font-size: clamp(42px, 5vw, 66px); }
+    p.lead {
+      margin: 18px 0 28px;
+      max-width: 760px;
+      color: var(--muted);
+      font-size: 18px;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      padding: 10px 18px;
+      color: var(--fg);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      font-size: 13px;
+    }
+
+    section { padding: 48px 7vw; }
+    .section-title {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 18px;
+      font-size: 22px;
+    }
+
+    .grid { display: grid; gap: 18px; }
+    .two { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 20px;
+      backdrop-filter: blur(6px);
+      box-shadow: 0 15px 60px rgba(0,0,0,0.35);
+      position: relative;
+      overflow: hidden;
+      transition: transform 220ms ease, border-color 220ms ease, box-shadow 220ms ease;
+    }
+    .card::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(139,225,255,0.14), transparent 55%);
+      opacity: 0;
+      transition: opacity 220ms ease;
+    }
+    .card:hover { transform: translateY(-4px); border-color: rgba(139,225,255,0.3); box-shadow: 0 20px 70px rgba(0,0,0,0.45); }
+    .card:hover::after { opacity: 1; }
+    .card h3 { margin-bottom: 10px; }
+    .muted { color: var(--muted); }
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      padding: 6px 12px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid var(--border);
+      color: var(--fg);
+      font-size: 13px;
+      gap: 8px;
+      margin: 6px 6px 0 0;
+    }
+    .stack-list { display: flex; flex-wrap: wrap; gap: 10px; margin: 8px 0 4px; }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 18px;
+      margin-top: 12px;
+    }
+    .shot {
+      position: relative;
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      box-shadow: 0 16px 50px rgba(0,0,0,0.35);
+      background: #0f141c;
+      transition: transform 240ms ease, box-shadow 240ms ease, border-color 240ms ease;
+    }
+    .shot img { width: 100%; display: block; object-fit: cover; aspect-ratio: 16 / 9; }
+    .shot:hover { transform: translateY(-4px) scale(1.01); border-color: rgba(139,225,255,0.32); box-shadow: 0 22px 60px rgba(0,0,0,0.45); }
+    .shot .label {
+      position: absolute;
+      left: 14px;
+      bottom: 14px;
+      background: rgba(0,0,0,0.55);
+      backdrop-filter: blur(6px);
+      padding: 8px 12px;
+      border-radius: 999px;
+      font-weight: 600;
+      color: var(--fg);
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 14px;
+      margin-top: 12px;
+    }
+    .step {
+      border: 1px dashed rgba(255,255,255,0.2);
+      border-radius: 14px;
+      padding: 14px 16px;
+      background: rgba(255,255,255,0.02);
+    }
+
+    @media (max-width: 720px) {
+      header, section { padding: 32px 6vw; }
+      h1 { font-size: 40px; }
+      .gallery { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="orb one"></div>
+    <div class="orb two"></div>
+    <div class="badge">PGE-SC • Hub de Ferramentas</div>
+    <h1>Plataforma PGE</h1>
+    <p class="lead">
+      Centraliza ferramentas jurídicas e administrativas (pautas de audiência, atos normativos, reservas e integrações).
+      Autenticação via JWT/LDAP, backend Django + PostgreSQL, frontend Next.js com design Radix/shadcn.
+    </p>
+  </header>
+
+  <section>
+    <div class="section-title">Destaques</div>
+    <div class="grid two">
+      <div class="card">
+        <h3>Hub unificado</h3>
+        <p class="muted">Dashboard com busca, categorias, favoritos e notificações para acessar ferramentas (Pautas, Atos, Reservas, Miner).</p>
+      </div>
+      <div class="card">
+        <h3>Pautas de audiência</h3>
+        <p class="muted">Filtros avançados (órgão, relator, assunto, tipo de sessão), ranking por câmaras e painel consolidado.</p>
+      </div>
+      <div class="card">
+        <h3>Atos normativos</h3>
+        <p class="muted">Consulta e gestão de atos com listagens, filtros e UI responsiva baseada em Radix.</p>
+      </div>
+      <div class="card">
+        <h3>Reserva de salas</h3>
+        <p class="muted">Agenda de salas/auditórios com status em tempo real (integração Firebase) e verificação de conflitos.</p>
+      </div>
+      <div class="card">
+        <h3>Segurança e SSO</h3>
+        <p class="muted">Autenticação via JWT com cookies httpOnly, suporte opcional a LDAP corporativo e controle de CORS/CSRF.</p>
+      </div>
+      <div class="card">
+        <h3>Integrações</h3>
+        <p class="muted">Webservices SOAP parametrizados (Zeep), cadastro de serviços/tribunais, e-mail e logs estruturados.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-title">Stack e Arquitetura</div>
+    <div class="grid two">
+      <div class="card">
+        <h3>Backend</h3>
+        <p class="muted">Django 3.12+, DRF, SimpleJWT (cookies httpOnly), CORS, WhiteNoise, logging estruturado.</p>
+        <div class="stack-list">
+          <span class="pill">Django</span>
+          <span class="pill">DRF</span>
+          <span class="pill">SimpleJWT</span>
+          <span class="pill">CORS</span>
+          <span class="pill">WhiteNoise</span>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Frontend</h3>
+        <p class="muted">Next.js + React 18, TypeScript, Radix UI/shadcn, lucide-react, react-hook-form, recharts, embla.</p>
+        <div class="stack-list">
+          <span class="pill">Next.js</span>
+          <span class="pill">React 18</span>
+          <span class="pill">TypeScript</span>
+          <span class="pill">Radix UI</span>
+          <span class="pill">shadcn</span>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Dados & Integrações</h3>
+        <p class="muted">PostgreSQL 16, Zeep/XML (SOAP), xmltodict, integração Firebase para reservas em tempo real.</p>
+        <div class="stack-list">
+          <span class="pill">PostgreSQL</span>
+          <span class="pill">Zeep/SOAP</span>
+          <span class="pill">xmltodict</span>
+          <span class="pill">Firebase (reservas)</span>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Infra/DevOps</h3>
+        <p class="muted">Docker Compose (dev/prod), imagens separadas de frontend/backend, env files versionados por ambiente.</p>
+        <div class="stack-list">
+          <span class="pill">Docker</span>
+          <span class="pill">Compose</span>
+          <span class="pill">.env por ambiente</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-title">Galeria</div>
+    <div class="gallery">
+      <figure class="shot">
+        <img src="images/plataforma-01.png" alt="Login da plataforma">
+        <div class="label">Login / Autenticação</div>
+      </figure>
+      <figure class="shot">
+        <img src="images/plataforma-02.png" alt="Dashboard de ferramentas">
+        <div class="label">Dashboard</div>
+      </figure>
+      <figure class="shot">
+        <img src="images/plataforma-03.png" alt="Pautas de audiência">
+        <div class="label">Pautas de audiência</div>
+      </figure>
+      <figure class="shot">
+        <img src="images/plataforma-04.png" alt="Atos normativos">
+        <div class="label">Atos normativos</div>
+      </figure>
+      <figure class="shot">
+        <img src="images/plataforma-05.png" alt="Reserva de salas">
+        <div class="label">Reserva de salas</div>
+      </figure>
+      <figure class="shot">
+        <img src="images/plataforma-06.png" alt="Integrações e APIs">
+        <div class="label">Integrações</div>
+      </figure>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-title">Como rodar (dev)</div>
+    <div class="steps">
+      <div class="step">
+        <strong>Docker Compose (dev)</strong><br>
+        `docker-compose -f docker-compose-dev.yml up` (sobe Postgres, backend e frontend).
+      </div>
+      <div class="step">
+        <strong>Backend</strong><br>
+        DJANGO_SETTINGS_MODULE=config.settings.development; migrações automáticas no entrypoint; API em 8001.
+      </div>
+      <div class="step">
+        <strong>Frontend</strong><br>
+        NEXT_PUBLIC_API_BASE_URL=http://localhost:8001; app Next em 3001.
+      </div>
+      <div class="step">
+        <strong>Produção</strong><br>
+        `docker-compose -f docker-compose-prod.yml up -d` com envs em `infra/.env/.env.prod`.
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = 1;
+          entry.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, { threshold: 0.18 });
+
+    document.querySelectorAll('.card, .shot, .step').forEach(el => {
+      el.style.opacity = 0;
+      el.style.transform = 'translateY(18px)';
+      el.style.transition = 'opacity 420ms ease, transform 420ms ease';
+      observer.observe(el);
+    });
+  </script>
+</body>
+</html>

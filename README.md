@@ -44,3 +44,48 @@ Imagens já organizadas em `images/` com nomes sequenciais:
 ## Observações
 - Mantenha variáveis de ambiente sensíveis (SGPE/EPROC/LDAP/bancos) fora do repositório público.
 - Reindexe o Elasticsearch com `python3 manage.py search_index --rebuild` ao ingerir novos dados.
+
+---
+
+# Plataforma PGE — Portfólio
+
+## Visão Geral
+- Hub unificado de ferramentas da PGE-SC: pautas de audiência, atos normativos, reservas de salas e integração com o Miner.
+- Autenticação com JWT em cookies httpOnly e opção de LDAP corporativo; CORS/CSRF configurados.
+- Dashboard com busca, categorias, favoritos e notificações; UI moderna (Radix/shadcn).
+- Integrações SOAP (Zeep/xmltodict) parametrizadas por tribunal/serviço e logs estruturados.
+
+## Stack Técnica
+- **Backend:** Django + DRF, SimpleJWT, WhiteNoise, CORS, logging configurável.
+- **Dados/Integrações:** PostgreSQL 16; Zeep/XML para webservices; Firebase (reservas em tempo real).
+- **Frontend:** Next.js + React 18 (TypeScript), Radix UI/shadcn, lucide-react, react-hook-form, recharts.
+- **Infra:** Docker Compose (dev/prod) com serviços separados para Postgres, backend e frontend; `.env` por ambiente.
+
+## Funcionalidades em Destaque
+- Hub de ferramentas com favoritos, recentes e filtros por categoria.
+- Pautas de audiência com filtros (órgão, relator, assunto, tipo de sessão) e ranking por câmaras.
+- Atos normativos com consulta/gestão em UI responsiva.
+- Reserva de salas/auditórios com status em tempo real (Firebase) e verificação de conflito.
+- Segurança: JWT httpOnly, suporte a LDAP, CORS/CSRF hardening.
+
+## Galeria de Telas
+Placeholders prontos em `images/` (substitua por capturas reais quando quiser).
+- ![Login](images/plataforma-01.png)
+- ![Dashboard](images/plataforma-02.png)
+- ![Pautas de audiência](images/plataforma-03.png)
+- ![Atos normativos](images/plataforma-04.png)
+- ![Reserva de salas](images/plataforma-05.png)
+- ![Integrações](images/plataforma-06.png)
+
+## Como Rodar (Dev)
+- `docker-compose -f docker-compose-dev.yml up` (sobe Postgres + backend + frontend).
+- Backend: `DJANGO_SETTINGS_MODULE=config.settings.development`, migrações aplicadas no entrypoint.
+- Frontend: `NEXT_PUBLIC_API_BASE_URL=http://localhost:8001`, roda em `3001`.
+
+## Observações
+- Guarde secrets (.env.prod) fora do repositório público.
+- Ajuste CORS/CSRF/LDAP conforme ambiente.
+
+## Portfólios
+- Miner: `portfolio.html`
+- Plataforma PGE: `plataformas.html`

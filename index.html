@@ -2,41 +2,110 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="refresh" content="0; url=portfolio.html">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Redirecionando para o Portfólio</title>
+  <title>Portfólio PGE — Miner e Plataforma</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
+    :root {
+      --bg: #0c1118;
+      --fg: #e8edf5;
+      --muted: #9fb3c8;
+      --primary: #17b3b3;
+      --card: rgba(255,255,255,0.05);
+      --border: rgba(255,255,255,0.12);
+    }
+    * { box-sizing: border-box; }
     body {
+      margin: 0;
+      font-family: 'Space Grotesk', system-ui, -apple-system, sans-serif;
+      background: radial-gradient(120% 160% at 10% 20%, rgba(93,213,167,0.08), transparent 40%),
+                  radial-gradient(100% 140% at 80% 10%, rgba(23,179,179,0.12), transparent 45%),
+                  radial-gradient(80% 120% at 60% 80%, rgba(139,225,255,0.1), transparent 50%),
+                  var(--bg);
+      color: var(--fg);
+      min-height: 100vh;
       display: grid;
       place-items: center;
-      height: 100vh;
-      margin: 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: radial-gradient(120% 120% at 20% 30%, rgba(23,179,179,0.08), transparent),
-                  radial-gradient(120% 120% at 70% 10%, rgba(139,225,255,0.12), transparent),
-                  #0c1118;
-      color: #e8edf5;
+      padding: 32px 18px;
+    }
+    .wrap {
+      width: min(960px, 100%);
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 28px;
+      box-shadow: 0 18px 60px rgba(0,0,0,0.38);
+      backdrop-filter: blur(4px);
+    }
+    h1 { margin: 0 0 12px; font-size: clamp(32px, 5vw, 48px); letter-spacing: -0.5px; }
+    p { margin: 0 0 18px; color: var(--muted); }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 16px;
+      margin-top: 12px;
     }
     .card {
-      padding: 18px 20px;
+      padding: 18px;
       border-radius: 14px;
-      border: 1px solid rgba(255,255,255,0.12);
+      border: 1px solid var(--border);
       background: rgba(255,255,255,0.04);
-      box-shadow: 0 16px 40px rgba(0,0,0,0.35);
-      text-align: center;
+      position: relative;
+      overflow: hidden;
+      transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
     }
-    a {
-      color: #8be1ff;
+    .card::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(139,225,255,0.12), transparent 55%);
+      opacity: 0;
+      transition: opacity 180ms ease;
+    }
+    .card:hover { transform: translateY(-4px); border-color: rgba(139,225,255,0.32); box-shadow: 0 14px 40px rgba(0,0,0,0.45); }
+    .card:hover::after { opacity: 1; }
+    .card h3 { margin: 0 0 6px; }
+    .card p { margin: 0 0 14px; }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 14px;
+      border-radius: 12px;
+      border: 1px solid rgba(255,255,255,0.14);
+      background: rgba(23,179,179,0.12);
+      color: var(--fg);
       text-decoration: none;
       font-weight: 600;
+      transition: background 180ms ease, border-color 180ms ease, transform 180ms ease;
     }
+    .btn:hover { background: rgba(23,179,179,0.22); border-color: rgba(23,179,179,0.5); transform: translateY(-2px); }
+    .pill { display: inline-flex; padding: 6px 10px; border-radius: 999px; background: rgba(255,255,255,0.08); border: 1px solid var(--border); font-size: 13px; color: var(--fg); }
   </style>
 </head>
 <body>
-  <div class="card">
-    Redirecionando para o portfólio...
-    <br>
-    <a href="portfolio.html">Ir para o portfólio</a>
+  <div class="wrap">
+    <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;">
+      <div>
+        <div class="pill">PGE • Portfólio</div>
+        <h1>Projetos</h1>
+        <p>Escolha qual portfólio visualizar.</p>
+      </div>
+    </div>
+    <div class="grid">
+      <div class="card">
+        <h3>PGE Miner</h3>
+        <p>Busca inteligente de documentos jurídicos, Elasticsearch + Next.js + Django.</p>
+        <a class="btn" href="portfolio.html">Abrir portfólio</a>
+      </div>
+      <div class="card">
+        <h3>Plataforma PGE</h3>
+        <p>Hub de ferramentas (pautas de audiência, atos normativos, reservas) com Next.js + Django.</p>
+        <a class="btn" href="plataformas.html">Abrir portfólio</a>
+      </div>
+    </div>
   </div>
 </body>
 </html>

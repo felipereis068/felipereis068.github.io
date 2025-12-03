@@ -68,6 +68,7 @@ Imagens já organizadas em `images/` com nomes sequenciais:
 - Reserva de salas/auditórios com status em tempo real (Firebase) e verificação de conflito.
 - Integrações SOAP: cadastro de webservices, serviços e parâmetros, com mapeamento de tribunais e manipulação de envelopes.
 - Segurança: JWT httpOnly, suporte a LDAP, CORS/CSRF hardening.
+- Notificação por e-mail (SMTP) para sinalizar execução bem-sucedida de rotinas/API.
 
 ## Galeria de Telas
 Placeholders prontos em `images/` (substitua por capturas reais quando quiser).
@@ -77,6 +78,8 @@ Placeholders prontos em `images/` (substitua por capturas reais quando quiser).
 - ![Atos normativos](images/plataforma-04.png)
 - ![Reserva de salas](images/plataforma-05.png)
 - ![Reserva de salas (detalhe)](images/plataforma-06.png)
+- ![Notificação SMTP](images/plataforma-07.png)
+- ![Execução de script/API](images/plataforma-08.png)
 
 ## Como Rodar (Dev)
 - `docker-compose -f docker-compose-dev.yml up` (sobe Postgres + backend + frontend).

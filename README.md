@@ -53,11 +53,11 @@ Imagens já organizadas em `images/` com nomes sequenciais:
 - Hub unificado de ferramentas da PGE-SC: pautas de audiência, atos normativos, reservas de salas e integração com o Miner.
 - Autenticação com JWT em cookies httpOnly e opção de LDAP corporativo; CORS/CSRF configurados.
 - Dashboard com busca, categorias, favoritos e notificações; UI moderna (Radix/shadcn).
-- Integrações SOAP (Zeep/xmltodict) parametrizadas por tribunal/serviço e logs estruturados.
+- Integrações SOAP (Zeep/xmltodict) parametrizadas por tribunal/serviço, manipulação de envelopes e logs estruturados para auditoria.
 
 ## Stack Técnica
-- **Backend:** Django + DRF, SimpleJWT, WhiteNoise, CORS, logging configurável.
-- **Dados/Integrações:** PostgreSQL 16; Zeep/XML para webservices; Firebase (reservas em tempo real).
+- **Backend:** Django + DRF, SimpleJWT, WhiteNoise, CORS, logging configurável, mapeamento de serviços/tribunais.
+- **Dados/Integrações:** PostgreSQL 16; Zeep/XML (SOAP) com parametrização de WSDLs, headers e payloads; Firebase (reservas em tempo real).
 - **Frontend:** Next.js + React 18 (TypeScript), Radix UI/shadcn, lucide-react, react-hook-form, recharts.
 - **Infra:** Docker Compose (dev/prod) com serviços separados para Postgres, backend e frontend; `.env` por ambiente.
 
@@ -66,6 +66,7 @@ Imagens já organizadas em `images/` com nomes sequenciais:
 - Pautas de audiência com filtros (órgão, relator, assunto, tipo de sessão) e ranking por câmaras.
 - Atos normativos com consulta/gestão em UI responsiva.
 - Reserva de salas/auditórios com status em tempo real (Firebase) e verificação de conflito.
+- Integrações SOAP: cadastro de webservices, serviços e parâmetros, com mapeamento de tribunais e manipulação de envelopes.
 - Segurança: JWT httpOnly, suporte a LDAP, CORS/CSRF hardening.
 
 ## Galeria de Telas

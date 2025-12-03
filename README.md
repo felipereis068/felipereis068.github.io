@@ -76,7 +76,7 @@ Placeholders prontos em `images/` (substitua por capturas reais quando quiser).
 - ![Pautas de audiência](images/plataforma-03.png)
 - ![Atos normativos](images/plataforma-04.png)
 - ![Reserva de salas](images/plataforma-05.png)
-- ![Integrações](images/plataforma-06.png)
+- ![Reserva de salas (detalhe)](images/plataforma-06.png)
 
 ## Como Rodar (Dev)
 - `docker-compose -f docker-compose-dev.yml up` (sobe Postgres + backend + frontend).

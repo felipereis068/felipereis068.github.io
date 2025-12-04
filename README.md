@@ -18,7 +18,7 @@
 - **Bancos:** PostgreSQL (principal) e Oracle via `cx-Oracle` para integrações legadas.
 - **Frontend:** Next.js 13 (React 18, TypeScript) com Chakra UI, React Table, React Hook Form, CKEditor 5, React-PDF-Viewer, React-Select, DatePicker, Toastify.
 - **Docs/OCR:** PDFMiner, PyPDF2, pdf2image, pytesseract, pdf2docx, reportlab.
-- **Infra/DevOps:** Docker/Docker Compose (dev/prod), Git para versionamento, Gunicorn (backend), servidor Node/Next (`start_prod`), variáveis de ambiente para APIs/bancos/LDAP.
+- **Infra/DevOps:** Docker/Docker Compose (dev/prod), Kubernetes (Miner) gerenciado via Rancher, scripts Perl para orquestração de contêineres, Git para versionamento, Gunicorn (backend), servidor Node/Next (`start_prod`), variáveis de ambiente para APIs/bancos/LDAP.
 
 ## Integrações Principais
 - SGPE (login, processo, tramitação, documentos via WSDL).
@@ -59,7 +59,7 @@ Imagens já organizadas em `images/` com nomes sequenciais:
 - **Backend:** Django + DRF, SimpleJWT, WhiteNoise, CORS, logging configurável, mapeamento de serviços/tribunais.
 - **Dados/Integrações:** PostgreSQL 16; Zeep/XML (SOAP) com parametrização de WSDLs, headers e payloads; Firebase (reservas em tempo real).
 - **Frontend:** Next.js + React 18 (TypeScript), Radix UI/shadcn, lucide-react, react-hook-form, recharts.
-- **Infra:** Docker Compose (dev/prod) com serviços separados para Postgres, backend e frontend; Git para versionamento; `.env` por ambiente.
+- **Infra:** Docker Compose (dev/prod) com serviços separados para Postgres, backend e frontend; Rancher para gerenciamento de contêineres; Git para versionamento; `.env` por ambiente.
 
 ## Funcionalidades em Destaque
 - Hub de ferramentas com favoritos, recentes e filtros por categoria.

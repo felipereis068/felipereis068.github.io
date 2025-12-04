@@ -75,7 +75,7 @@
   <header>
     <div class="orb one"></div>
     <div class="orb two"></div>
-    <div class="badge">PGE-SC • Portfólio</div>
+    <div class="badge">• Portfólio</div>
     <h1>Projetos: Miner e Plataforma</h1>
     <p class="lead">Dois produtos distintos: PGE Miner (busca inteligente de documentos jurídicos) e Plataforma PGE (hub de ferramentas: pautas, atos normativos, reservas, integrações SOAP). Clique nas imagens para ampliar.</p>
   </header>
@@ -97,10 +97,10 @@
       <div class="grid two">
         <div class="card"><h3>Backend</h3><p class="muted">Python 3, Django 3.2, DRF, SimpleJWT, CORS; Gunicorn em produção.</p><div class="stack-list"><span class="pill">Django</span><span class="pill">DRF</span><span class="pill">SimpleJWT</span><span class="pill">Gunicorn</span></div></div>
         <div class="card"><h3>Frontend</h3><p class="muted">Next.js 13 (React 18, TS) com Chakra UI, React Table, React Hook Form, CKEditor 5, React-PDF-Viewer.</p><div class="stack-list"><span class="pill">Next.js 13</span><span class="pill">React 18</span><span class="pill">TypeScript</span><span class="pill">Chakra UI</span></div></div>
-        <div class="card"><h3>Pesquisa e Dados</h3><p class="muted">Elasticsearch 7.17, PostgreSQL, Oracle via cx-Oracle.</p><div class="stack-list"><span class="pill">Elasticsearch</span><span class="pill">PostgreSQL</span><span class="pill">Oracle</span></div></div>
-        <div class="card"><h3>Integrações</h3><p class="muted">SGPE (login/processo/tramitação/documentos), EPROC 1G/2G via WSDL, LDAP, SMTP.</p><div class="stack-list"><span class="pill">SGPE</span><span class="pill">EPROC</span><span class="pill">LDAP</span><span class="pill">SMTP</span></div></div>
+        <div class="card"><h3>Pesquisa e Dados</h3><p class="muted">Elasticsearch 7.17, PostgreSQL, Oracle via cx-Oracle; buscas abastecidas por scripts agendados.</p><div class="stack-list"><span class="pill">Elasticsearch</span><span class="pill">PostgreSQL</span><span class="pill">Oracle</span></div></div>
+        <div class="card"><h3>Integrações</h3><p class="muted">SGPE (login/processo/tramitação/documentos), EPROC 1G/2G via WSDL, LDAP, SMTP; uso de SOAP (Zeep) para chamadas externas.</p><div class="stack-list"><span class="pill">SGPE</span><span class="pill">EPROC</span><span class="pill">SOAP/Zeep</span><span class="pill">LDAP</span><span class="pill">SMTP</span></div></div>
         <div class="card"><h3>Docs/OCR</h3><p class="muted">PDFMiner, PyPDF2, pdf2image, pytesseract, pdf2docx, reportlab.</p><div class="stack-list"><span class="pill">pytesseract</span><span class="pill">pdf2image</span><span class="pill">pdfminer.six</span></div></div>
-        <div class="card"><h3>Infra</h3><p class="muted">Docker/Compose (dev/prod), Git, Node server custom.</p><div class="stack-list"><span class="pill">Docker</span><span class="pill">Compose</span><span class="pill">Git</span></div></div>
+        <div class="card"><h3>Infra</h3><p class="muted">Docker/Compose (dev/prod), Git, Node server custom e Nginx como proxy/reverso.</p><div class="stack-list"><span class="pill">Docker</span><span class="pill">Compose</span><span class="pill">Git</span><span class="pill">Nginx</span></div></div>
       </div>
 
       <div class="section-title">Galeria</div>
@@ -113,12 +113,6 @@
         <figure class="shot" data-img="images/miner-07.png"><img src="images/miner-07.png" alt="Visão adicional do fluxo"><div class="label">Visão adicional</div></figure>
       </div>
 
-      <div class="section-title">Como rodar (dev)</div>
-      <div class="steps">
-        <div class="step"><strong>Backend</strong><br>docker-compose up (backend-miner); criar superusuário + indexar: python3 manage.py search_index --rebuild.</div>
-        <div class="step"><strong>Frontend</strong><br>yarn install && yarn dev (ou compose na raiz).</div>
-        <div class="step"><strong>Variáveis</strong><br>SGPE, EPROC, LDAP, bancos e SMTP via .env (não versionar secrets).</div>
-      </div>
     </div>
 
     <div class="project" id="plataforma">
@@ -140,7 +134,7 @@
         <div class="card"><h3>Backend</h3><p class="muted">Django + DRF, SimpleJWT, WhiteNoise, CORS, logging configurável.</p><div class="stack-list"><span class="pill">Django</span><span class="pill">DRF</span><span class="pill">SimpleJWT</span><span class="pill">WhiteNoise</span></div></div>
         <div class="card"><h3>Frontend</h3><p class="muted">Next.js + React 18 (TS), Radix UI/shadcn, lucide-react, react-hook-form, recharts.</p><div class="stack-list"><span class="pill">Next.js</span><span class="pill">React 18</span><span class="pill">TypeScript</span><span class="pill">Radix UI</span></div></div>
         <div class="card"><h3>Dados & Integrações</h3><p class="muted">PostgreSQL 16; Zeep/XML (SOAP) com WSDLs/headers/payloads dinâmicos; Firebase (reservas).</p><div class="stack-list"><span class="pill">PostgreSQL</span><span class="pill">Zeep/SOAP</span><span class="pill">xmltodict</span><span class="pill">Firebase</span></div></div>
-        <div class="card"><h3>Infra</h3><p class="muted">Docker Compose (dev/prod) separado por serviço; Git para versionamento; .env por ambiente.</p><div class="stack-list"><span class="pill">Docker</span><span class="pill">Compose</span><span class="pill">Git</span></div></div>
+        <div class="card"><h3>Infra</h3><p class="muted">Docker Compose (dev/prod) separado por serviço; Git para versionamento; Nginx na borda; .env por ambiente.</p><div class="stack-list"><span class="pill">Docker</span><span class="pill">Compose</span><span class="pill">Git</span><span class="pill">Nginx</span></div></div>
       </div>
 
       <div class="section-title">Galeria</div>
@@ -155,12 +149,6 @@
         <figure class="shot" data-img="images/plataforma-08.png"><img src="images/plataforma-08.png" alt="Execução do script/API"><div class="label">Execução de script/API</div></figure>
       </div>
 
-      <div class="section-title">Como rodar (dev)</div>
-      <div class="steps">
-        <div class="step"><strong>Compose dev</strong><br>`docker-compose -f docker-compose-dev.yml up` (Postgres + backend + frontend).</div>
-        <div class="step"><strong>Backend</strong><br>DJANGO_SETTINGS_MODULE=config.settings.development; migrações no entrypoint.</div>
-        <div class="step"><strong>Frontend</strong><br>NEXT_PUBLIC_API_BASE_URL=http://localhost:8001; app em 3001.</div>
-      </div>
     </div>
   </section>
 

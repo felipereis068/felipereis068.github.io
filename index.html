@@ -3,116 +3,269 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfólio PGE — Miner e Plataforma</title>
+  <title>Felipe Reis | Portfólio Dev</title>
+  <meta name="description" content="Portfólio de sistemas web, automações, integrações e módulos desenvolvidos por Felipe Reis.">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --bg: #0c1118;
-      --fg: #e8edf5;
-      --muted: #9fb3c8;
-      --primary: #17b3b3;
-      --card: rgba(255,255,255,0.05);
-      --border: rgba(255,255,255,0.12);
-    }
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      font-family: 'Space Grotesk', system-ui, -apple-system, sans-serif;
-      background: radial-gradient(120% 160% at 10% 20%, rgba(93,213,167,0.08), transparent 40%),
-                  radial-gradient(100% 140% at 80% 10%, rgba(23,179,179,0.12), transparent 45%),
-                  radial-gradient(80% 120% at 60% 80%, rgba(139,225,255,0.1), transparent 50%),
-                  var(--bg);
-      color: var(--fg);
-      min-height: 100vh;
-      display: grid;
-      place-items: center;
-      padding: 32px 18px;
-    }
-    .wrap {
-      width: min(960px, 100%);
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 18px;
-      padding: 28px;
-      box-shadow: 0 18px 60px rgba(0,0,0,0.38);
-      backdrop-filter: blur(4px);
-    }
-    h1 { margin: 0 0 12px; font-size: clamp(32px, 5vw, 48px); letter-spacing: -0.5px; }
-    p { margin: 0 0 18px; color: var(--muted); }
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 16px;
-      margin-top: 12px;
-    }
-    .card {
-      padding: 18px;
-      border-radius: 14px;
-      border: 1px solid var(--border);
-      background: rgba(255,255,255,0.04);
-      position: relative;
-      overflow: hidden;
-      transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
-      pointer-events: auto;
-    }
-    .card::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(135deg, rgba(139,225,255,0.12), transparent 55%);
-      opacity: 0;
-      transition: opacity 180ms ease;
-      pointer-events: none;
-    }
-    .card:hover { transform: translateY(-4px); border-color: rgba(139,225,255,0.32); box-shadow: 0 14px 40px rgba(0,0,0,0.45); }
-    .card:hover::after { opacity: 1; }
-    .card h3 { margin: 0 0 6px; }
-    .card p { margin: 0 0 14px; }
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      padding: 12px 14px;
-      border-radius: 12px;
-      border: 1px solid rgba(255,255,255,0.14);
-      background: rgba(23,179,179,0.12);
-      color: var(--fg);
-      text-decoration: none;
-      font-weight: 600;
-      transition: background 180ms ease, border-color 180ms ease, transform 180ms ease;
-      position: relative;
-      z-index: 2;
-      pointer-events: auto;
-      cursor: pointer;
-    }
-    .btn:hover { background: rgba(23,179,179,0.22); border-color: rgba(23,179,179,0.5); transform: translateY(-2px); }
-    .pill { display: inline-flex; padding: 6px 10px; border-radius: 999px; background: rgba(255,255,255,0.08); border: 1px solid var(--border); font-size: 13px; color: var(--fg); }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/portfolio.css">
 </head>
 <body>
-  <div class="wrap">
-    <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;">
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Início">
+      <span class="brand-mark">FR</span>
+      <span>
+        <strong>Felipe Reis</strong>
+        <small>Full stack developer</small>
+      </span>
+    </a>
+    <nav class="top-nav" aria-label="Navegação principal">
+      <a href="#modulos">Módulos</a>
+      <a href="#stack">Stack</a>
+      <a href="#galeria">Galeria</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Portfólio técnico</p>
+        <h1>Sistemas internos, integrações e produtos web com foco em operação real.</h1>
+        <p class="hero-text">
+          Desenvolvimento de plataformas para busca documental, pareceres, pautas, reservas,
+          gestão administrativa, automações e integrações com serviços corporativos.
+        </p>
+        <div class="hero-actions" aria-label="Ações principais">
+          <a class="button primary" href="#modulos">Ver módulos</a>
+          <a class="button ghost" href="#galeria">Ver telas</a>
+        </div>
+      </div>
+
+      <div class="hero-preview" aria-label="Prévia visual dos sistemas">
+        <img src="images/plataforma-02.png" alt="Dashboard da Plataforma PGE com ferramentas disponíveis">
+        <div class="preview-caption">
+          <span>Dashboard de módulos</span>
+          <strong>Next.js + Django + Docker</strong>
+        </div>
+      </div>
+    </section>
+
+    <section class="metrics" aria-label="Resumo do portfólio">
+      <article>
+        <span>10+</span>
+        <p>Módulos e fluxos criados ou evoluídos</p>
+      </article>
+      <article>
+        <span>Full stack</span>
+        <p>Frontend, backend, banco, integração e deploy</p>
+      </article>
+      <article>
+        <span>Docker</span>
+        <p>Ambientes replicáveis para desenvolvimento e produção</p>
+      </article>
+    </section>
+
+    <section class="section" id="modulos">
+      <div class="section-heading">
+        <p class="eyebrow">Produtos e módulos</p>
+        <h2>Menos vitrine genérica, mais sistema funcionando.</h2>
+      </div>
+
+      <div class="module-grid">
+        <article class="module-card featured">
+          <div>
+            <p class="module-kicker">Produto principal</p>
+            <h3>Miner</h3>
+            <p>
+              Busca e gestão de documentos jurídicos com filtros avançados, leitura de PDF,
+              pareceres, revisão e integrações com bases externas.
+            </p>
+          </div>
+          <ul class="clean-list">
+            <li>Elasticsearch para pesquisa full-text</li>
+            <li>Django REST Framework no backend</li>
+            <li>Next.js, React e TypeScript no frontend</li>
+            <li>PDF, OCR, Word e automações documentais</li>
+          </ul>
+        </article>
+
+        <article class="module-card featured">
+          <div>
+            <p class="module-kicker">Hub de ferramentas</p>
+            <h3>Plataforma PGE</h3>
+            <p>
+              Centralização de ferramentas internas, autenticação, favoritos, notificações,
+              permissões, módulos administrativos e integrações corporativas.
+            </p>
+          </div>
+          <ul class="clean-list">
+            <li>Dashboard com busca e atalhos</li>
+            <li>JWT, cookies httpOnly e controle de acesso</li>
+            <li>PostgreSQL e APIs em Django</li>
+            <li>Integrações SOAP e rotinas automatizadas</li>
+          </ul>
+        </article>
+
+        <article class="module-card">
+          <p class="module-kicker">Jurídico</p>
+          <h3>Pautas de Audiência</h3>
+          <p>Filtros por órgão, relator, assunto, sessão, processo e calendário consolidado.</p>
+        </article>
+
+        <article class="module-card">
+          <p class="module-kicker">Documentos</p>
+          <h3>Atos Normativos</h3>
+          <p>Consulta, organização e gestão de atos com interface responsiva e backend dedicado.</p>
+        </article>
+
+        <article class="module-card">
+          <p class="module-kicker">Agenda</p>
+          <h3>Reserva de Salas</h3>
+          <p>Agenda de salas e auditórios com status em tempo real e verificação de conflitos.</p>
+        </article>
+
+        <article class="module-card">
+          <p class="module-kicker">Integrações</p>
+          <h3>SOAP, SMTP, LDAP e rotinas</h3>
+          <p>Serviços externos, autenticação corporativa, notificações e scripts operacionais.</p>
+        </article>
+
+        <article class="module-card">
+          <p class="module-kicker">Operação</p>
+          <h3>Processos e atendimentos</h3>
+          <p>Fluxos administrativos para acompanhamento, comunicação interna e organização de demandas.</p>
+        </article>
+
+        <article class="module-card">
+          <p class="module-kicker">Eventos</p>
+          <h3>Inscrições e relatórios</h3>
+          <p>Controle de inscrições, exportações, confirmação de presença e páginas públicas.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section stack-section" id="stack">
+      <div class="section-heading compact">
+        <p class="eyebrow">Stack</p>
+        <h2>Base técnica direta, sem enfeite.</h2>
+      </div>
+
+      <div class="stack-grid">
+        <article>
+          <h3>Frontend</h3>
+          <div class="tags">
+            <span>Next.js</span>
+            <span>React</span>
+            <span>TypeScript</span>
+            <span>Radix UI</span>
+            <span>Chakra UI</span>
+            <span>React Hook Form</span>
+          </div>
+        </article>
+        <article>
+          <h3>Backend</h3>
+          <div class="tags">
+            <span>Python</span>
+            <span>Django</span>
+            <span>DRF</span>
+            <span>SimpleJWT</span>
+            <span>Gunicorn</span>
+            <span>APIs REST</span>
+          </div>
+        </article>
+        <article>
+          <h3>Dados e busca</h3>
+          <div class="tags">
+            <span>PostgreSQL</span>
+            <span>Oracle</span>
+            <span>Elasticsearch</span>
+            <span>Firebase</span>
+            <span>SQL</span>
+          </div>
+        </article>
+        <article>
+          <h3>Infra e integrações</h3>
+          <div class="tags">
+            <span>Docker</span>
+            <span>Docker Compose</span>
+            <span>Nginx</span>
+            <span>Rancher</span>
+            <span>Harbor</span>
+            <span>SOAP/Zeep</span>
+            <span>LDAP</span>
+            <span>SMTP</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="galeria">
+      <div class="section-heading">
+        <p class="eyebrow">Galeria</p>
+        <h2>Telas reais dos sistemas.</h2>
+      </div>
+
+      <div class="gallery-toolbar" aria-label="Filtros da galeria">
+        <button class="filter active" type="button" data-filter="all">Todas</button>
+        <button class="filter" type="button" data-filter="miner">Miner</button>
+        <button class="filter" type="button" data-filter="plataforma">Plataforma</button>
+        <button class="filter" type="button" data-filter="pautas">Pautas</button>
+        <button class="filter" type="button" data-filter="reservas">Reservas</button>
+      </div>
+
+      <div class="gallery-grid">
+        <figure class="shot wide" data-group="plataforma" data-img="images/plataforma-02.png" data-title="Dashboard da Plataforma">
+          <img src="images/plataforma-02.png" alt="Dashboard da plataforma com ferramentas disponíveis">
+          <figcaption>Dashboard da Plataforma</figcaption>
+        </figure>
+        <figure class="shot wide" data-group="miner" data-img="images/miner-03.png" data-title="Consulta de Pareceres">
+          <img src="images/miner-03.png" alt="Consulta de pareceres com filtros e tabela de resultados">
+          <figcaption>Consulta de Pareceres</figcaption>
+        </figure>
+        <figure class="shot wide" data-group="pautas" data-img="images/plataforma-03.png" data-title="Pautas de Audiência">
+          <img src="images/plataforma-03.png" alt="Módulo de pautas de audiência com calendário e filtros">
+          <figcaption>Pautas de Audiência</figcaption>
+        </figure>
+        <figure class="shot" data-group="miner" data-img="images/miner-02.png" data-title="Busca e filtros">
+          <img src="images/miner-02.png" alt="Resultados de busca no Miner com filtros">
+          <figcaption>Busca e filtros</figcaption>
+        </figure>
+        <figure class="shot" data-group="miner" data-img="images/miner-06.png" data-title="Revisão lado a lado">
+          <img src="images/miner-06.png" alt="Tela de revisão com formulário e PDF lado a lado">
+          <figcaption>Revisão lado a lado</figcaption>
+        </figure>
+        <figure class="shot" data-group="reservas" data-img="images/plataforma-05.png" data-title="Reserva de Salas">
+          <img src="images/plataforma-05.png" alt="Módulo de reserva de salas">
+          <figcaption>Reserva de Salas</figcaption>
+        </figure>
+        <figure class="shot" data-group="reservas" data-img="images/plataforma-06.png" data-title="Detalhe de reserva">
+          <img src="images/plataforma-06.png" alt="Detalhe do módulo de reserva de salas">
+          <figcaption>Detalhe de reserva</figcaption>
+        </figure>
+        <figure class="shot" data-group="plataforma" data-img="images/plataforma-08.png" data-title="Rotina e API">
+          <img src="images/plataforma-08.png" alt="Execução de script ou API na plataforma">
+          <figcaption>Rotina e API</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="contact" id="contato">
       <div>
-        <div class="pill">PGE • Portfólio</div>
-        <h1>Projetos</h1>
-        <p>Escolha qual portfólio visualizar.</p>
+        <p class="eyebrow">Contato</p>
+        <h2>Portfólio pronto para evoluir junto com os próximos módulos.</h2>
       </div>
-    </div>
-    <div class="grid">
-      <div class="card">
-        <h3>Miner</h3>
-        <p>Busca inteligente de documentos jurídicos, Elasticsearch + Next.js + Django.</p>
-        <a class="btn" href="portfolio.html">Abrir portfólio</a>
-      </div>
-      <div class="card">
-        <h3>Plataforma PGE</h3>
-        <p>Hub de ferramentas (pautas de audiência, atos normativos, reservas) com Next.js + Django.</p>
-        <a class="btn" href="plataformas.html">Abrir portfólio</a>
-      </div>
-    </div>
+      <a class="button primary" href="mailto:felipereis068@gmail.com">felipereis068@gmail.com</a>
+    </section>
+  </main>
+
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lightbox-close" type="button" aria-label="Fechar imagem">Fechar</button>
+    <img src="" alt="">
+    <p></p>
   </div>
+
+  <script src="assets/portfolio.js"></script>
 </body>
 </html>

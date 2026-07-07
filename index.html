@@ -23,6 +23,9 @@
     <nav class="top-nav" aria-label="Navegação principal">
       <a href="#modulos">Módulos</a>
       <a href="#plataforma-pge">Plataforma</a>
+      <a href="#sistema-sap">SAP</a>
+      <a href="#sistema-pareceres">Pareceres</a>
+      <a href="#sistema-atendimento-profis">Atendimento</a>
       <a href="#stack">Stack</a>
       <a href="#contato">Contato</a>
     </nav>
@@ -54,8 +57,8 @@
 
     <section class="metrics" aria-label="Resumo do portfólio">
       <article>
-        <span>Módulo 01</span>
-        <p>Plataforma PGE com telas, stack e integrações documentadas</p>
+        <span>4 módulos</span>
+        <p>Plataforma, SAP, Pareceres e Atendimento Profis apresentados com telas e contexto técnico</p>
       </article>
       <article>
         <span>Full stack</span>
@@ -192,13 +195,358 @@
         </div>
       </article>
 
+      <article class="module-showcase" id="sistema-sap">
+        <div class="module-showcase-hero">
+          <div>
+            <p class="module-kicker">Módulo 02</p>
+            <h3>Sistema SAP</h3>
+            <p>
+              Sistema de acompanhamento de processos SGPE integrado à Plataforma PGE.
+              O módulo organiza processos por setor, prioridade, situação, responsáveis,
+              observações e favoritos, com atualização automática pelo scheduler e ações
+              operacionais para concluir, reabrir, editar e sincronizar registros.
+            </p>
+            <div class="module-actions">
+              <a class="button primary" href="#sap-galeria">Ver telas do módulo</a>
+              <a class="button ghost" href="#stack">Ver stack técnica</a>
+            </div>
+          </div>
+          <figure class="module-cover">
+            <img src="images/sap-modulo-lista.png" alt="Lista de processos do Sistema SAP">
+            <figcaption>Lista operacional com métricas, filtros, colunas e ações por processo.</figcaption>
+          </figure>
+        </div>
+
+        <div class="module-info-grid">
+          <section>
+            <p class="module-kicker">O que entrega</p>
+            <ul class="clean-list">
+              <li>Acompanhamento de processos SGPE por setor do usuário</li>
+              <li>Tabela com prioridade, responsáveis, observações e ações rápidas</li>
+              <li>Filtro geral, favoritos, processos concluídos e preferências de colunas</li>
+              <li>Notificações, comentários e histórico de observações por processo</li>
+              <li>Scheduler backend para sincronização automática com SGPE/Boavista</li>
+            </ul>
+          </section>
+          <section>
+            <p class="module-kicker">Frontend</p>
+            <div class="tags">
+              <span>Next.js 15.5</span>
+              <span>React 18</span>
+              <span>TypeScript 5</span>
+              <span>Radix UI</span>
+              <span>lucide-react</span>
+              <span>React Hook Form</span>
+              <span>Recharts</span>
+            </div>
+          </section>
+          <section>
+            <p class="module-kicker">Backend e dados</p>
+            <div class="tags">
+              <span>Django 5.1</span>
+              <span>Django REST Framework</span>
+              <span>PostgreSQL 16</span>
+              <span>SimpleJWT</span>
+              <span>django-auth-ldap</span>
+              <span>Docxtpl</span>
+            </div>
+          </section>
+          <section>
+            <p class="module-kicker">Integrações</p>
+            <div class="tags">
+              <span>SGPE SOAP/Zeep</span>
+              <span>Boavista Impyla</span>
+              <span>Plataforma SSO</span>
+              <span>Scheduler</span>
+              <span>Docker Compose</span>
+              <span>LibreOffice</span>
+            </div>
+          </section>
+        </div>
+
+        <div class="module-process">
+          <article>
+            <span>Compose de dev</span>
+            <p>Serviços <code>frontend</code>, <code>backend</code>, <code>scheduler</code> e <code>db</code>, publicados em <code>3004</code>, <code>8004</code> e <code>5436</code>.</p>
+          </article>
+          <article>
+            <span>Sincronização</span>
+            <p>O scheduler executa <code>sincronizar_processos_periodicamente</code> e atualiza os processos cadastrados no backend.</p>
+          </article>
+          <article>
+            <span>Modelo operacional</span>
+            <p>Processos ficam no PostgreSQL com setor, distribuição, responsável, observações, tramitações, notificações e estado de arquivamento.</p>
+          </article>
+        </div>
+
+        <div class="module-gallery" id="sap-galeria">
+          <div class="module-gallery-heading">
+            <div>
+              <p class="module-kicker">Galeria do módulo</p>
+              <h3>Telas capturadas do SAP rodando em Docker Compose.</h3>
+            </div>
+            <span>7 telas</span>
+          </div>
+
+          <div class="gallery-grid module-shot-grid">
+            <figure class="shot wide" data-group="sap" data-img="images/sap-modulo-lista.png" data-title="Lista de processos SAP">
+              <img src="images/sap-modulo-lista.png" alt="Lista de processos do Sistema SAP com métricas e tabela">
+              <figcaption>Lista de processos</figcaption>
+            </figure>
+            <figure class="shot wide" data-group="sap" data-img="images/sap-modulo-acoes.png" data-title="Ações por processo">
+              <img src="images/sap-modulo-acoes.png" alt="Menu de ações por processo no Sistema SAP">
+              <figcaption>Ações por processo</figcaption>
+            </figure>
+            <figure class="shot wide" data-group="sap" data-img="images/sap-modulo-observacoes.png" data-title="Observações do processo">
+              <img src="images/sap-modulo-observacoes.png" alt="Modal de observações do processo no Sistema SAP">
+              <figcaption>Observações</figcaption>
+            </figure>
+            <figure class="shot" data-group="sap" data-img="images/sap-modulo-filtro.png" data-title="Filtro de processos">
+              <img src="images/sap-modulo-filtro.png" alt="Filtro aplicado na lista de processos SAP">
+              <figcaption>Filtro geral</figcaption>
+            </figure>
+            <figure class="shot" data-group="sap" data-img="images/sap-modulo-colunas.png" data-title="Preferências de colunas">
+              <img src="images/sap-modulo-colunas.png" alt="Preferências de colunas do Sistema SAP">
+              <figcaption>Colunas configuráveis</figcaption>
+            </figure>
+            <figure class="shot" data-group="sap" data-img="images/sap-modulo-concluidos.png" data-title="Processos concluídos">
+              <img src="images/sap-modulo-concluidos.png" alt="Aba de processos concluídos no Sistema SAP">
+              <figcaption>Concluídos</figcaption>
+            </figure>
+            <figure class="shot" data-group="sap" data-img="images/sap-modulo-admin.png" data-title="SAP Admin">
+              <img src="images/sap-modulo-admin.png" alt="Admin Django do backend do Sistema SAP">
+              <figcaption>SAP Admin</figcaption>
+            </figure>
+          </div>
+        </div>
+      </article>
+
+      <article class="module-showcase" id="sistema-pareceres">
+        <div class="module-showcase-hero">
+          <div>
+            <p class="module-kicker">Módulo 03</p>
+            <h3>Pareceres</h3>
+            <p>
+              Sistema jurídico para consulta, cadastro, gestão e publicação de pareceres,
+              com leitura de PDFs, metadados de processo, sigilo, assinatura, superação de
+              pareceres, integração com SGPe e rotinas mineradoras. O mesmo backend também
+              sustenta Atos Normativos, Despacho Jurídico, Petição Inicial, Corregedoria e
+              fluxos de dispensa de recursos.
+            </p>
+            <div class="module-actions">
+              <a class="button primary" href="#pareceres-galeria">Ver captura publicada</a>
+              <a class="button ghost" href="#stack">Ver stack técnica</a>
+            </div>
+          </div>
+          <figure class="module-cover">
+            <img src="images/pareceres-modulo-acesso.png" alt="Login publicado da Plataforma ao acessar Pareceres">
+            <figcaption>Ambiente publicado redirecionando `/pareceres` para login institucional.</figcaption>
+          </figure>
+        </div>
+
+        <div class="module-info-grid">
+          <section>
+            <p class="module-kicker">O que entrega</p>
+            <ul class="clean-list">
+              <li>Consulta e filtros de pareceres com busca textual e metadados jurídicos</li>
+              <li>Cadastro e edição com documentos, assinatura, sigilo, status e ementa</li>
+              <li>Visualização de PDF, peças SGPe, pareceres superados e histórico</li>
+              <li>Atos Normativos, Despacho Jurídico, Petição Inicial e Corregedoria</li>
+              <li>Rotinas de mineração para SGPe, Drive PGE, SAJ e dispensa de recursos</li>
+            </ul>
+          </section>
+          <section>
+            <p class="module-kicker">Frontend</p>
+            <div class="tags">
+              <span>Next.js 13</span>
+              <span>React 18</span>
+              <span>TypeScript 5</span>
+              <span>Chakra UI</span>
+              <span>React Table</span>
+              <span>PDF Viewer</span>
+              <span>CKEditor</span>
+            </div>
+          </section>
+          <section>
+            <p class="module-kicker">Backend e busca</p>
+            <div class="tags">
+              <span>Django 3.2</span>
+              <span>DRF</span>
+              <span>PostgreSQL</span>
+              <span>Elasticsearch 7</span>
+              <span>SimpleJWT</span>
+              <span>django-filter</span>
+            </div>
+          </section>
+          <section>
+            <p class="module-kicker">Documentos e integrações</p>
+            <div class="tags">
+              <span>SGPe SOAP/Zeep</span>
+              <span>Boa Vista</span>
+              <span>Google Drive</span>
+              <span>OCR</span>
+              <span>PDF/Word</span>
+              <span>LDAP</span>
+              <span>MinIO</span>
+            </div>
+          </section>
+        </div>
+
+        <div class="module-process">
+          <article>
+            <span>Captura publicada</span>
+            <p>A URL <code>https://plataforma.app.pge.sc.gov.br/pareceres</code> redireciona para <code>/login?next=/pareceres</code> sem sessão ativa.</p>
+          </article>
+          <article>
+            <span>Pipeline de dados</span>
+            <p>Jobs importam documentos do SGPe, Drive PGE, SAJ e bases externas, alimentando PostgreSQL e índices Elasticsearch.</p>
+          </article>
+          <article>
+            <span>Controle jurídico</span>
+            <p>O backend aplica status, sigilo, permissões de edição/exclusão, assinatura e vínculos entre pareceres.</p>
+          </article>
+        </div>
+
+        <div class="module-gallery" id="pareceres-galeria">
+          <div class="module-gallery-heading">
+            <div>
+              <p class="module-kicker">Galeria do módulo</p>
+              <h3>Captura real do ambiente publicado, com acesso interno protegido por login.</h3>
+            </div>
+            <span>1 tela</span>
+          </div>
+
+          <div class="gallery-grid module-shot-grid single-shot-grid">
+            <figure class="shot wide" data-group="pareceres" data-img="images/pareceres-modulo-acesso.png" data-title="Acesso publicado a Pareceres">
+              <img src="images/pareceres-modulo-acesso.png" alt="Tela de login ao acessar Pareceres no ambiente publicado">
+              <figcaption>Acesso institucional</figcaption>
+            </figure>
+          </div>
+        </div>
+      </article>
+
+      <article class="module-showcase" id="sistema-atendimento-profis">
+        <div class="module-showcase-hero">
+          <div>
+            <p class="module-kicker">Módulo 04</p>
+            <h3>Atendimento Profis</h3>
+            <p>
+              Central de atendimento para demandas Profis, com abertura de chamados pelo
+              portal, triagem operacional, acompanhamento por status, técnicos, setores,
+              anexos, respostas por portal/e-mail, mensagens internas e monitoramento da
+              equipe. O módulo segue o padrão da Plataforma PGE e usa Docker Compose para
+              frontend, backend e banco em desenvolvimento.
+            </p>
+            <div class="module-actions">
+              <a class="button primary" href="#atendimento-profis-galeria">Ver telas do módulo</a>
+              <a class="button ghost" href="#stack">Ver stack técnica</a>
+            </div>
+          </div>
+          <figure class="module-cover">
+            <img src="images/atendimento-profis-modulo-lista.svg" alt="Fila operacional do Atendimento Profis">
+            <figcaption>Fila operacional com chamados, métricas, filtros e badges de mensagens.</figcaption>
+          </figure>
+        </div>
+
+        <div class="module-info-grid">
+          <section>
+            <p class="module-kicker">O que entrega</p>
+            <ul class="clean-list">
+              <li>Abertura pública de chamados Profis com documentos e protocolo</li>
+              <li>Fila operacional com status, prioridades, técnicos e setor atual</li>
+              <li>Chat interno flutuante, badges numéricos e alertas sonoros</li>
+              <li>Histórico, anexos, respostas por portal/e-mail e avaliação</li>
+              <li>Monitoramento de técnicos, produtividade e transferência entre setores</li>
+            </ul>
+          </section>
+          <section>
+            <p class="module-kicker">Frontend</p>
+            <div class="tags">
+              <span>Next.js 15.5</span>
+              <span>React 18</span>
+              <span>TypeScript 5</span>
+              <span>Radix UI</span>
+              <span>lucide-react</span>
+              <span>React Hook Form</span>
+              <span>Recharts</span>
+            </div>
+          </section>
+          <section>
+            <p class="module-kicker">Backend e dados</p>
+            <div class="tags">
+              <span>Django</span>
+              <span>Django REST Framework</span>
+              <span>PostgreSQL 16</span>
+              <span>django-auth-ldap</span>
+              <span>Gunicorn</span>
+              <span>WhiteNoise</span>
+            </div>
+          </section>
+          <section>
+            <p class="module-kicker">Integrações e operação</p>
+            <div class="tags">
+              <span>Plataforma SSO</span>
+              <span>Portal Profis</span>
+              <span>E-mail/IMAP</span>
+              <span>Anexos</span>
+              <span>Audio messages</span>
+              <span>Docker Compose</span>
+            </div>
+          </section>
+        </div>
+
+        <div class="module-process">
+          <article>
+            <span>Compose de dev</span>
+            <p>Serviços <code>frontend</code>, <code>backend</code> e <code>db</code>, publicados em <code>3010</code>, <code>8010</code> e <code>5445</code>.</p>
+          </article>
+          <article>
+            <span>Fluxo de atendimento</span>
+            <p>O chamado nasce pelo portal, recebe setor/categoria, passa por triagem técnica e mantém histórico, anexos e comunicação com o solicitante.</p>
+          </article>
+          <article>
+            <span>Comunicação interna</span>
+            <p>O backend expõe <code>mensagens-internas</code>, typing status, marcação de leitura e badges para trabalho em equipe.</p>
+          </article>
+        </div>
+
+        <div class="module-gallery" id="atendimento-profis-galeria">
+          <div class="module-gallery-heading">
+            <div>
+              <p class="module-kicker">Galeria do módulo</p>
+              <h3>Telas apresentáveis do Atendimento Profis com base no módulo local e suas funcionalidades reais.</h3>
+            </div>
+            <span>5 telas</span>
+          </div>
+
+          <div class="gallery-grid module-shot-grid">
+            <figure class="shot wide" data-group="atendimento-profis" data-img="images/atendimento-profis-modulo-lista.svg" data-title="Fila operacional">
+              <img src="images/atendimento-profis-modulo-lista.svg" alt="Fila operacional do Atendimento Profis com métricas e chamados">
+              <figcaption>Fila operacional</figcaption>
+            </figure>
+            <figure class="shot wide" data-group="atendimento-profis" data-img="images/atendimento-profis-modulo-detalhe.svg" data-title="Detalhe do chamado">
+              <img src="images/atendimento-profis-modulo-detalhe.svg" alt="Detalhe de chamado do Atendimento Profis">
+              <figcaption>Detalhe do chamado</figcaption>
+            </figure>
+            <figure class="shot wide" data-group="atendimento-profis" data-img="images/atendimento-profis-modulo-chat.svg" data-title="Chat interno">
+              <img src="images/atendimento-profis-modulo-chat.svg" alt="Chat interno flutuante do Atendimento Profis">
+              <figcaption>Chat interno</figcaption>
+            </figure>
+            <figure class="shot" data-group="atendimento-profis" data-img="images/atendimento-profis-modulo-portal.svg" data-title="Portal de abertura">
+              <img src="images/atendimento-profis-modulo-portal.svg" alt="Portal de abertura de chamado Profis">
+              <figcaption>Portal de abertura</figcaption>
+            </figure>
+            <figure class="shot" data-group="atendimento-profis" data-img="images/atendimento-profis-modulo-admin.svg" data-title="Monitoramento e admin">
+              <img src="images/atendimento-profis-modulo-admin.svg" alt="Monitoramento administrativo do Atendimento Profis">
+              <figcaption>Monitoramento</figcaption>
+            </figure>
+          </div>
+        </div>
+      </article>
+
       <div class="next-modules">
         <p class="module-kicker">Próximos módulos para adicionar</p>
         <div class="module-grid compact">
-          <article class="module-card">
-            <h3>Miner / Pareceres</h3>
-            <p>Busca documental, pareceres, revisão e integrações com bases externas.</p>
-          </article>
           <article class="module-card">
             <h3>Pautas de Audiência</h3>
             <p>Filtros por órgão, relator, assunto, sessão, processo e calendário consolidado.</p>
@@ -208,8 +556,8 @@
             <p>Agenda de salas e auditórios com status em tempo real e verificação de conflitos.</p>
           </article>
           <article class="module-card">
-            <h3>Eventos e atendimentos</h3>
-            <p>Inscrições, relatórios, chamados, comunicação interna e gestão operacional.</p>
+            <h3>Eventos</h3>
+            <p>Inscrições, relatórios, listas, certificados e gestão operacional de eventos.</p>
           </article>
         </div>
       </div>

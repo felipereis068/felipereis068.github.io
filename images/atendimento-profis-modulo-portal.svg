@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="900" viewBox="0 0 1440 900" role="img" aria-labelledby="title desc">
+  <title id="title">Portal de abertura de chamado Profis</title>
+  <desc id="desc">Tela publica para abertura e acompanhamento de chamados Profis.</desc>
+  <rect width="1440" height="900" fill="#f8fafc"/>
+  <rect x="0" y="0" width="1440" height="132" fill="#0f766e"/>
+  <text x="92" y="80" fill="#fff" font-family="Inter,Arial" font-size="30" font-weight="850">Procuradoria-Geral do Estado de Santa Catarina</text>
+  <text x="1016" y="80" fill="#ccfbf1" font-family="Inter,Arial" font-size="17" font-weight="800">Atendimento Profis</text>
+  <text x="92" y="206" fill="#0f172a" font-family="Inter,Arial" font-size="42" font-weight="850">Abra seu atendimento</text>
+  <text x="92" y="248" fill="#64748b" font-family="Inter,Arial" font-size="18">Registre solicitacoes, envie documentos e acompanhe o atendimento da PGE.</text>
+  <rect x="92" y="294" width="480" height="472" rx="20" fill="#fff" stroke="#e2e8f0"/>
+  <text x="128" y="346" fill="#0f172a" font-family="Inter,Arial" font-size="22" font-weight="850">Dados do solicitante</text>
+  <rect x="128" y="382" width="380" height="54" rx="10" fill="#f8fafc" stroke="#cbd5e1"/>
+  <text x="148" y="416" fill="#64748b" font-family="Inter,Arial" font-size="15">Nome completo</text>
+  <rect x="128" y="458" width="380" height="54" rx="10" fill="#f8fafc" stroke="#cbd5e1"/>
+  <text x="148" y="492" fill="#64748b" font-family="Inter,Arial" font-size="15">E-mail</text>
+  <rect x="128" y="534" width="380" height="54" rx="10" fill="#f8fafc" stroke="#cbd5e1"/>
+  <text x="148" y="568" fill="#64748b" font-family="Inter,Arial" font-size="15">CPF ou CNPJ relacionado</text>
+  <rect x="128" y="612" width="380" height="94" rx="10" fill="#f8fafc" stroke="#cbd5e1"/>
+  <text x="148" y="646" fill="#64748b" font-family="Inter,Arial" font-size="15">Descreva sua demanda</text>
+  <rect x="128" y="724" width="220" height="48" rx="24" fill="#0f766e"/>
+  <text x="170" y="754" fill="#fff" font-family="Inter,Arial" font-size="15" font-weight="850">Enviar chamado</text>
+  <rect x="620" y="294" width="728" height="472" rx="20" fill="#fff" stroke="#e2e8f0"/>
+  <text x="660" y="346" fill="#0f172a" font-family="Inter,Arial" font-size="22" font-weight="850">Escolha a area de atendimento</text>
+  <rect x="660" y="386" width="294" height="118" rx="16" fill="#f0fdfa" stroke="#99f6e4"/>
+  <text x="692" y="430" fill="#0f766e" font-family="Inter,Arial" font-size="18" font-weight="850">Divida ativa</text>
+  <text x="692" y="462" fill="#475569" font-family="Inter,Arial" font-size="14">Pagamento, parcelamento, guias e CPEN.</text>
+  <rect x="984" y="386" width="294" height="118" rx="16" fill="#f8fafc" stroke="#e2e8f0"/>
+  <text x="1016" y="430" fill="#334155" font-family="Inter,Arial" font-size="18" font-weight="850">Protesto</text>
+  <text x="1016" y="462" fill="#64748b" font-family="Inter,Arial" font-size="14">Carta de anuencia e baixa de protesto.</text>
+  <rect x="660" y="532" width="618" height="104" rx="16" fill="#eff6ff" stroke="#bfdbfe"/>
+  <text x="692" y="574" fill="#1d4ed8" font-family="Inter,Arial" font-size="18" font-weight="850">Acompanhar meus chamados</text>
+  <text x="692" y="606" fill="#475569" font-family="Inter,Arial" font-size="14">Chat com equipe, anexos, historico e avaliacao do atendimento.</text>
+  <rect x="660" y="668" width="618" height="44" rx="22" fill="#e0f2fe"/>
+  <text x="692" y="696" fill="#0369a1" font-family="Inter,Arial" font-size="14" font-weight="800">Arquivos permitidos: imagem, audio, PDF, Word e ZIP</text>
+</svg>

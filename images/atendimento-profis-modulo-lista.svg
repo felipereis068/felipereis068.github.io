@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="900" viewBox="0 0 1440 900" role="img" aria-labelledby="title desc">
+  <title id="title">Fila operacional do Atendimento Profis</title>
+  <desc id="desc">Painel com fila de chamados, metricas, filtros, status e badges de notificacao.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#eef7f5"/>
+      <stop offset="1" stop-color="#e9edf7"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#244153" flood-opacity=".18"/>
+    </filter>
+  </defs>
+  <rect width="1440" height="900" fill="url(#bg)"/>
+  <rect x="58" y="52" width="1324" height="796" rx="18" fill="#f8fafc" filter="url(#shadow)"/>
+  <rect x="58" y="52" width="1324" height="72" rx="18" fill="#0f766e"/>
+  <text x="92" y="97" fill="#fff" font-family="Inter,Arial" font-size="24" font-weight="800">Atendimento Profis</text>
+  <text x="1198" y="96" fill="#d7fffb" font-family="Inter,Arial" font-size="15" font-weight="700">Portfolio Capture</text>
+  <rect x="92" y="154" width="236" height="98" rx="12" fill="#ecfeff" stroke="#a5f3fc"/>
+  <rect x="352" y="154" width="236" height="98" rx="12" fill="#eff6ff" stroke="#bfdbfe"/>
+  <rect x="612" y="154" width="236" height="98" rx="12" fill="#fff7ed" stroke="#fed7aa"/>
+  <rect x="872" y="154" width="236" height="98" rx="12" fill="#fef2f2" stroke="#fecaca"/>
+  <text x="118" y="190" fill="#0f172a" font-family="Inter,Arial" font-size="15" font-weight="700">Chamados abertos</text>
+  <text x="118" y="229" fill="#0f766e" font-family="Inter,Arial" font-size="42" font-weight="800">18</text>
+  <text x="378" y="190" fill="#0f172a" font-family="Inter,Arial" font-size="15" font-weight="700">Em atendimento</text>
+  <text x="378" y="229" fill="#2563eb" font-family="Inter,Arial" font-size="42" font-weight="800">09</text>
+  <text x="638" y="190" fill="#0f172a" font-family="Inter,Arial" font-size="15" font-weight="700">Aguardando docs</text>
+  <text x="638" y="229" fill="#ea580c" font-family="Inter,Arial" font-size="42" font-weight="800">05</text>
+  <text x="898" y="190" fill="#0f172a" font-family="Inter,Arial" font-size="15" font-weight="700">Criticos</text>
+  <text x="898" y="229" fill="#dc2626" font-family="Inter,Arial" font-size="42" font-weight="800">03</text>
+  <rect x="92" y="286" width="1256" height="72" rx="14" fill="#fff" stroke="#e2e8f0"/>
+  <text x="122" y="331" fill="#64748b" font-family="Inter,Arial" font-size="16">Buscar por protocolo, contribuinte, assunto ou CPF/CNPJ</text>
+  <rect x="1004" y="306" width="142" height="32" rx="16" fill="#ccfbf1"/>
+  <text x="1033" y="327" fill="#0f766e" font-family="Inter,Arial" font-size="13" font-weight="800">PROFIS</text>
+  <rect x="1166" y="306" width="142" height="32" rx="16" fill="#fee2e2"/>
+  <text x="1191" y="327" fill="#b91c1c" font-family="Inter,Arial" font-size="13" font-weight="800">Criticos</text>
+  <rect x="92" y="390" width="1256" height="374" rx="16" fill="#fff" stroke="#e2e8f0"/>
+  <rect x="92" y="390" width="1256" height="48" rx="16" fill="#f8fafc"/>
+  <text x="126" y="420" fill="#475569" font-family="Inter,Arial" font-size="13" font-weight="800">PROTOCOLO</text>
+  <text x="294" y="420" fill="#475569" font-family="Inter,Arial" font-size="13" font-weight="800">ASSUNTO</text>
+  <text x="750" y="420" fill="#475569" font-family="Inter,Arial" font-size="13" font-weight="800">STATUS</text>
+  <text x="966" y="420" fill="#475569" font-family="Inter,Arial" font-size="13" font-weight="800">TECNICO</text>
+  <text x="1196" y="420" fill="#475569" font-family="Inter,Arial" font-size="13" font-weight="800">CHAT</text>
+  <g font-family="Inter,Arial" font-size="16">
+    <rect x="116" y="462" width="1208" height="70" rx="12" fill="#f8fffe" stroke="#d1fae5"/>
+    <text x="126" y="504" fill="#0f766e" font-weight="800">PROFIS-000018/2026</text>
+    <text x="294" y="489" fill="#0f172a" font-weight="800">Solicitacao de parcelamento de divida ativa</text>
+    <text x="294" y="514" fill="#64748b" font-size="13">Maria Oliveira - portal</text>
+    <rect x="750" y="478" width="152" height="28" rx="14" fill="#dbeafe"/>
+    <text x="775" y="497" fill="#1d4ed8" font-size="13" font-weight="800">Em analise</text>
+    <text x="966" y="503" fill="#334155">Portfolio Capture</text>
+    <circle cx="1214" cy="493" r="18" fill="#ef4444"/>
+    <text x="1208" y="499" fill="#fff" font-size="15" font-weight="800">2</text>
+    <rect x="116" y="548" width="1208" height="70" rx="12" fill="#fff" stroke="#e2e8f0"/>
+    <text x="126" y="590" fill="#0f766e" font-weight="800">PROFIS-000017/2026</text>
+    <text x="294" y="575" fill="#0f172a" font-weight="800">Emissao de guia atualizada</text>
+    <text x="294" y="600" fill="#64748b" font-size="13">Carlos Mendes - e-mail</text>
+    <rect x="750" y="564" width="152" height="28" rx="14" fill="#ccfbf1"/>
+    <text x="770" y="583" fill="#0f766e" font-size="13" font-weight="800">Iniciado</text>
+    <text x="966" y="589" fill="#334155">Portfolio Capture</text>
+    <circle cx="1214" cy="579" r="18" fill="#14b8a6"/>
+    <text x="1208" y="585" fill="#fff" font-size="15" font-weight="800">1</text>
+    <rect x="116" y="634" width="1208" height="70" rx="12" fill="#fff7f7" stroke="#fecaca"/>
+    <text x="126" y="676" fill="#0f766e" font-weight="800">PROFIS-000016/2026</text>
+    <text x="294" y="661" fill="#0f172a" font-weight="800">Protesto e carta de anuencia</text>
+    <text x="294" y="686" fill="#64748b" font-size="13">Ana Pereira - WhatsApp</text>
+    <rect x="750" y="650" width="196" height="28" rx="14" fill="#ffedd5"/>
+    <text x="772" y="669" fill="#c2410c" font-size="13" font-weight="800">Aguardando docs</text>
+    <text x="966" y="675" fill="#334155">Sem responsavel</text>
+    <circle cx="1214" cy="665" r="18" fill="#ef4444"/>
+    <text x="1208" y="671" fill="#fff" font-size="15" font-weight="800">3</text>
+  </g>
+  <rect x="1040" y="702" width="268" height="46" rx="23" fill="#0f766e"/>
+  <text x="1092" y="731" fill="#fff" font-family="Inter,Arial" font-size="15" font-weight="800">Abrir painel do chat interno</text>
+</svg>

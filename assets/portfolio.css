@@ -355,6 +355,12 @@ section[id],
   gap: 28px;
 }
 
+.module-showcase + .module-showcase {
+  margin-top: 58px;
+  padding-top: 58px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
 .module-showcase-hero {
   display: grid;
   grid-template-columns: minmax(0, 0.92fr) minmax(360px, 1fr);
@@ -477,6 +483,10 @@ section[id],
 
 .module-shot-grid {
   margin-top: 0;
+}
+
+.single-shot-grid .shot.wide {
+  grid-column: span 3;
 }
 
 .next-modules {
@@ -686,7 +696,8 @@ section[id],
   }
 
   .shot,
-  .shot.wide {
+  .shot.wide,
+  .single-shot-grid .shot.wide {
     grid-column: span 1;
   }
 }

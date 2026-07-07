@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="900" viewBox="0 0 1440 900" role="img" aria-labelledby="title desc">
+  <title id="title">Detalhe de chamado do Atendimento Profis</title>
+  <desc id="desc">Tela de detalhe com dados do contribuinte, status operacional, historico e acoes.</desc>
+  <rect width="1440" height="900" fill="#eef2f7"/>
+  <rect x="56" y="50" width="1328" height="800" rx="20" fill="#ffffff"/>
+  <rect x="56" y="50" width="300" height="800" rx="20" fill="#0f172a"/>
+  <text x="92" y="105" fill="#f8fafc" font-family="Inter,Arial" font-size="24" font-weight="800">Atendimento Profis</text>
+  <text x="92" y="146" fill="#94a3b8" font-family="Inter,Arial" font-size="14">Central operacional</text>
+  <rect x="86" y="192" width="238" height="48" rx="10" fill="#14b8a6"/>
+  <text x="116" y="223" fill="#fff" font-family="Inter,Arial" font-size="15" font-weight="800">Fila de chamados</text>
+  <text x="116" y="292" fill="#cbd5e1" font-family="Inter,Arial" font-size="15">Monitoramento</text>
+  <text x="116" y="344" fill="#cbd5e1" font-family="Inter,Arial" font-size="15">Todos os chamados</text>
+  <text x="116" y="396" fill="#cbd5e1" font-family="Inter,Arial" font-size="15">Configuracoes</text>
+  <text x="398" y="112" fill="#0f172a" font-family="Inter,Arial" font-size="34" font-weight="850">PROFIS-000018/2026</text>
+  <text x="398" y="150" fill="#64748b" font-family="Inter,Arial" font-size="16">Solicitacao de parcelamento de divida ativa</text>
+  <rect x="398" y="184" width="590" height="232" rx="18" fill="#f8fafc" stroke="#e2e8f0"/>
+  <text x="432" y="226" fill="#0f172a" font-family="Inter,Arial" font-size="20" font-weight="800">Identificacao do contribuinte</text>
+  <text x="432" y="276" fill="#64748b" font-family="Inter,Arial" font-size="13" font-weight="800">NOME COMPLETO</text>
+  <text x="432" y="304" fill="#0f172a" font-family="Inter,Arial" font-size="17" font-weight="700">Maria Oliveira</text>
+  <text x="432" y="354" fill="#64748b" font-family="Inter,Arial" font-size="13" font-weight="800">E-MAIL</text>
+  <text x="432" y="382" fill="#0f172a" font-family="Inter,Arial" font-size="17" font-weight="700">maria.oliveira@example.com</text>
+  <text x="710" y="276" fill="#64748b" font-family="Inter,Arial" font-size="13" font-weight="800">ASSUNTO</text>
+  <text x="710" y="304" fill="#0f172a" font-family="Inter,Arial" font-size="17" font-weight="700">Pagamento ou Parcelamento</text>
+  <text x="710" y="354" fill="#64748b" font-family="Inter,Arial" font-size="13" font-weight="800">CANAL</text>
+  <text x="710" y="382" fill="#0f172a" font-family="Inter,Arial" font-size="17" font-weight="700">Portal</text>
+  <rect x="1018" y="184" width="300" height="232" rx="18" fill="#f0fdfa" stroke="#99f6e4"/>
+  <text x="1050" y="226" fill="#0f766e" font-family="Inter,Arial" font-size="18" font-weight="850">Status operacional</text>
+  <rect x="1050" y="256" width="160" height="34" rx="17" fill="#dbeafe"/>
+  <text x="1080" y="278" fill="#1d4ed8" font-family="Inter,Arial" font-size="14" font-weight="800">Em analise</text>
+  <text x="1050" y="334" fill="#0f172a" font-family="Inter,Arial" font-size="15" font-weight="700">Tecnico responsavel</text>
+  <text x="1050" y="362" fill="#475569" font-family="Inter,Arial" font-size="16">Portfolio Capture</text>
+  <rect x="398" y="446" width="590" height="330" rx="18" fill="#fff" stroke="#e2e8f0"/>
+  <text x="432" y="492" fill="#0f172a" font-family="Inter,Arial" font-size="20" font-weight="800">Historico do atendimento</text>
+  <circle cx="446" cy="550" r="9" fill="#14b8a6"/>
+  <line x1="446" y1="559" x2="446" y2="705" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="474" y="548" fill="#0f172a" font-family="Inter,Arial" font-size="16" font-weight="800">Chamado aberto pelo portal Profis</text>
+  <text x="474" y="574" fill="#64748b" font-family="Inter,Arial" font-size="13">Criacao automatica com protocolo e dados do solicitante.</text>
+  <circle cx="446" cy="634" r="9" fill="#2563eb"/>
+  <text x="474" y="632" fill="#0f172a" font-family="Inter,Arial" font-size="16" font-weight="800">Status atualizado para Em analise</text>
+  <text x="474" y="658" fill="#64748b" font-family="Inter,Arial" font-size="13">Tecnico iniciou conferencia de documentos.</text>
+  <circle cx="446" cy="718" r="9" fill="#f59e0b"/>
+  <text x="474" y="716" fill="#0f172a" font-family="Inter,Arial" font-size="16" font-weight="800">Aguardando validacao de CDA</text>
+  <text x="474" y="742" fill="#64748b" font-family="Inter,Arial" font-size="13">Observacao interna visivel para o nucleo atual.</text>
+  <rect x="1018" y="446" width="300" height="330" rx="18" fill="#fff" stroke="#e2e8f0"/>
+  <text x="1050" y="492" fill="#0f172a" font-family="Inter,Arial" font-size="20" font-weight="800">Acoes</text>
+  <rect x="1050" y="530" width="220" height="42" rx="10" fill="#0f766e"/>
+  <text x="1096" y="557" fill="#fff" font-family="Inter,Arial" font-size="14" font-weight="800">Responder portal</text>
+  <rect x="1050" y="590" width="220" height="42" rx="10" fill="#f1f5f9" stroke="#cbd5e1"/>
+  <text x="1096" y="617" fill="#334155" font-family="Inter,Arial" font-size="14" font-weight="800">Transferir setor</text>
+  <rect x="1050" y="650" width="220" height="42" rx="10" fill="#f1f5f9" stroke="#cbd5e1"/>
+  <text x="1096" y="677" fill="#334155" font-family="Inter,Arial" font-size="14" font-weight="800">Anexar documento</text>
+  <rect x="1050" y="710" width="220" height="42" rx="10" fill="#fee2e2"/>
+  <text x="1096" y="737" fill="#b91c1c" font-family="Inter,Arial" font-size="14" font-weight="800">Finalizar chamado</text>
+</svg>

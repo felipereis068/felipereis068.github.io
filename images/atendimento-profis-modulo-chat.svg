@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="900" viewBox="0 0 1440 900" role="img" aria-labelledby="title desc">
+  <title id="title">Chat interno do Atendimento Profis</title>
+  <desc id="desc">Painel flutuante de chat interno com mensagens de equipe e badges numericos.</desc>
+  <rect width="1440" height="900" fill="#edf6f4"/>
+  <rect x="82" y="72" width="900" height="720" rx="18" fill="#fff" stroke="#dbeafe"/>
+  <text x="122" y="132" fill="#0f172a" font-family="Inter,Arial" font-size="30" font-weight="850">Fila de chamados</text>
+  <rect x="122" y="182" width="800" height="86" rx="14" fill="#f8fffe" stroke="#99f6e4"/>
+  <text x="154" y="218" fill="#0f766e" font-family="Inter,Arial" font-size="15" font-weight="800">PROFIS-000018/2026</text>
+  <text x="154" y="248" fill="#0f172a" font-family="Inter,Arial" font-size="20" font-weight="800">Parcelamento de divida ativa</text>
+  <circle cx="876" cy="225" r="20" fill="#ef4444"/>
+  <text x="870" y="232" fill="#fff" font-family="Inter,Arial" font-size="16" font-weight="850">2</text>
+  <rect x="122" y="294" width="800" height="86" rx="14" fill="#fff" stroke="#e2e8f0"/>
+  <text x="154" y="330" fill="#0f766e" font-family="Inter,Arial" font-size="15" font-weight="800">PROFIS-000017/2026</text>
+  <text x="154" y="360" fill="#0f172a" font-family="Inter,Arial" font-size="20" font-weight="800">Emissao de guia atualizada</text>
+  <circle cx="876" cy="337" r="20" fill="#14b8a6"/>
+  <text x="871" y="344" fill="#fff" font-family="Inter,Arial" font-size="16" font-weight="850">1</text>
+  <rect x="1000" y="102" width="360" height="650" rx="22" fill="#0f172a"/>
+  <rect x="1024" y="126" width="312" height="72" rx="16" fill="#123a44"/>
+  <text x="1050" y="160" fill="#fff" font-family="Inter,Arial" font-size="19" font-weight="850">Chat interno</text>
+  <text x="1050" y="184" fill="#99f6e4" font-family="Inter,Arial" font-size="13">Nucleo PROFIS - 3 participantes online</text>
+  <rect x="1040" y="230" width="238" height="74" rx="16" fill="#1e293b"/>
+  <text x="1060" y="260" fill="#cbd5e1" font-family="Inter,Arial" font-size="13" font-weight="800">Portfolio Capture</text>
+  <text x="1060" y="284" fill="#f8fafc" font-family="Inter,Arial" font-size="14">Validar CDA no SGPe antes da resposta.</text>
+  <rect x="1100" y="326" width="220" height="74" rx="16" fill="#0f766e"/>
+  <text x="1120" y="356" fill="#d7fffb" font-family="Inter,Arial" font-size="13" font-weight="800">Voce</text>
+  <text x="1120" y="380" fill="#fff" font-family="Inter,Arial" font-size="14">Documentacao conferida.</text>
+  <rect x="1040" y="422" width="258" height="94" rx="16" fill="#1e293b"/>
+  <text x="1060" y="452" fill="#cbd5e1" font-family="Inter,Arial" font-size="13" font-weight="800">Equipe PROFIS</text>
+  <text x="1060" y="476" fill="#f8fafc" font-family="Inter,Arial" font-size="14">Preparar resposta padrao com prazo de retorno.</text>
+  <rect x="1040" y="548" width="280" height="52" rx="26" fill="#fff"/>
+  <text x="1068" y="581" fill="#64748b" font-family="Inter,Arial" font-size="14">Escrever mensagem interna...</text>
+  <circle cx="1280" cy="574" r="18" fill="#14b8a6"/>
+  <text x="1274" y="580" fill="#fff" font-family="Inter,Arial" font-size="16" font-weight="850">+</text>
+  <circle cx="1295" cy="712" r="44" fill="#14b8a6"/>
+  <text x="1274" y="722" fill="#fff" font-family="Inter,Arial" font-size="32" font-weight="850">3</text>
+  <text x="116" y="748" fill="#64748b" font-family="Inter,Arial" font-size="16">Badges numericos, som de notificacao e painel flutuante no canto direito.</text>
+</svg>

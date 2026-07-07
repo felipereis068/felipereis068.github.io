@@ -22,8 +22,8 @@
     </a>
     <nav class="top-nav" aria-label="Navegação principal">
       <a href="#modulos">Módulos</a>
+      <a href="#plataforma-pge">Plataforma</a>
       <a href="#stack">Stack</a>
-      <a href="#galeria">Galeria</a>
       <a href="#contato">Contato</a>
     </nav>
   </header>
@@ -39,23 +39,23 @@
         </p>
         <div class="hero-actions" aria-label="Ações principais">
           <a class="button primary" href="#modulos">Ver módulos</a>
-          <a class="button ghost" href="#galeria">Ver telas</a>
+          <a class="button ghost" href="#plataforma-galeria">Ver telas</a>
         </div>
       </div>
 
       <div class="hero-preview" aria-label="Prévia visual dos sistemas">
-        <img src="images/plataforma-02.png" alt="Dashboard da Plataforma PGE com ferramentas disponíveis">
+        <img src="images/plataforma-modulo-dashboard.png" alt="Dashboard da Plataforma PGE com ferramentas disponíveis">
         <div class="preview-caption">
-          <span>Dashboard de módulos</span>
-          <strong>Next.js + Django + Docker</strong>
+          <span>Plataforma PGE documentada como primeiro módulo</span>
+          <strong>Next.js 15 + Django 5 + Docker</strong>
         </div>
       </div>
     </section>
 
     <section class="metrics" aria-label="Resumo do portfólio">
       <article>
-        <span>10+</span>
-        <p>Módulos e fluxos criados ou evoluídos</p>
+        <span>Módulo 01</span>
+        <p>Plataforma PGE com telas, stack e integrações documentadas</p>
       </article>
       <article>
         <span>Full stack</span>
@@ -70,79 +70,148 @@
     <section class="section" id="modulos">
       <div class="section-heading">
         <p class="eyebrow">Produtos e módulos</p>
-        <h2>Menos vitrine genérica, mais sistema funcionando.</h2>
+        <h2>Apresentação por módulo, com contexto e telas reais.</h2>
       </div>
 
-      <div class="module-grid">
-        <article class="module-card featured">
+      <article class="module-showcase" id="plataforma-pge">
+        <div class="module-showcase-hero">
           <div>
-            <p class="module-kicker">Produto principal</p>
-            <h3>Miner</h3>
-            <p>
-              Busca e gestão de documentos jurídicos com filtros avançados, leitura de PDF,
-              pareceres, revisão e integrações com bases externas.
-            </p>
-          </div>
-          <ul class="clean-list">
-            <li>Elasticsearch para pesquisa full-text</li>
-            <li>Django REST Framework no backend</li>
-            <li>Next.js, React e TypeScript no frontend</li>
-            <li>PDF, OCR, Word e automações documentais</li>
-          </ul>
-        </article>
-
-        <article class="module-card featured">
-          <div>
-            <p class="module-kicker">Hub de ferramentas</p>
+            <p class="module-kicker">Módulo 01</p>
             <h3>Plataforma PGE</h3>
             <p>
-              Centralização de ferramentas internas, autenticação, favoritos, notificações,
-              permissões, módulos administrativos e integrações corporativas.
+              Hub institucional que centraliza sistemas internos da PGE-SC, autenticação,
+              permissões, favoritos, notificações e atalhos para módulos administrativos e
+              jurídicos. O módulo funciona como porta de entrada para ferramentas como
+              Pareceres, Atos Normativos, Pautas, SAP, Reserva de Salas, Eventos, Chamados,
+              Atendimento Profis e Contratos.
             </p>
+            <div class="module-actions">
+              <a class="button primary" href="#plataforma-galeria">Ver telas do módulo</a>
+              <a class="button ghost" href="#stack">Ver stack técnica</a>
+            </div>
           </div>
-          <ul class="clean-list">
-            <li>Dashboard com busca e atalhos</li>
-            <li>JWT, cookies httpOnly e controle de acesso</li>
-            <li>PostgreSQL e APIs em Django</li>
-            <li>Integrações SOAP e rotinas automatizadas</li>
-          </ul>
-        </article>
+          <figure class="module-cover">
+            <img src="images/plataforma-modulo-dashboard.png" alt="Dashboard da Plataforma PGE com ferramentas disponíveis">
+            <figcaption>Dashboard principal com cards dos sistemas disponíveis.</figcaption>
+          </figure>
+        </div>
 
-        <article class="module-card">
-          <p class="module-kicker">Jurídico</p>
-          <h3>Pautas de Audiência</h3>
-          <p>Filtros por órgão, relator, assunto, sessão, processo e calendário consolidado.</p>
-        </article>
+        <div class="module-info-grid">
+          <section>
+            <p class="module-kicker">O que entrega</p>
+            <ul class="clean-list">
+              <li>Login institucional com credenciais locais, Google e Gov.br</li>
+              <li>Dashboard unificado para entrada nos sistemas corporativos</li>
+              <li>Central de Admin para acessar backends administrativos</li>
+              <li>Perfil do usuário, sessão, permissões e navegação protegida</li>
+              <li>Integração com módulos externos por URLs de ambiente</li>
+            </ul>
+          </section>
+          <section>
+            <p class="module-kicker">Frontend</p>
+            <div class="tags">
+              <span>Next.js 15.5</span>
+              <span>React 18</span>
+              <span>TypeScript 5</span>
+              <span>Radix UI</span>
+              <span>lucide-react</span>
+              <span>React Hook Form</span>
+              <span>Sonner</span>
+            </div>
+          </section>
+          <section>
+            <p class="module-kicker">Backend e dados</p>
+            <div class="tags">
+              <span>Django 5.1</span>
+              <span>Django REST Framework</span>
+              <span>SimpleJWT</span>
+              <span>PostgreSQL 16</span>
+              <span>Gunicorn</span>
+              <span>Whitenoise</span>
+            </div>
+          </section>
+          <section>
+            <p class="module-kicker">Infra e integrações</p>
+            <div class="tags">
+              <span>Docker Compose</span>
+              <span>LDAP</span>
+              <span>Google Auth</span>
+              <span>Gov.br SSO</span>
+              <span>SOAP/Zeep</span>
+              <span>Cookies httpOnly</span>
+            </div>
+          </section>
+        </div>
 
-        <article class="module-card">
-          <p class="module-kicker">Documentos</p>
-          <h3>Atos Normativos</h3>
-          <p>Consulta, organização e gestão de atos com interface responsiva e backend dedicado.</p>
-        </article>
+        <div class="module-process">
+          <article>
+            <span>Compose de dev</span>
+            <p>Serviços <code>frontend</code>, <code>backend</code> e <code>db</code>, com Next.js em <code>3000</code>, Django em <code>8000</code> e PostgreSQL em <code>5432</code>.</p>
+          </article>
+          <article>
+            <span>Controle de acesso</span>
+            <p>JWT, cookies httpOnly, usuário autenticado, grupos administrativos e bloqueio de ferramentas sem permissão.</p>
+          </article>
+          <article>
+            <span>Operação</span>
+            <p>Centraliza URLs de sistemas satélites e mantém a experiência de entrada única para módulos internos.</p>
+          </article>
+        </div>
 
-        <article class="module-card">
-          <p class="module-kicker">Agenda</p>
-          <h3>Reserva de Salas</h3>
-          <p>Agenda de salas e auditórios com status em tempo real e verificação de conflitos.</p>
-        </article>
+        <div class="module-gallery" id="plataforma-galeria">
+          <div class="module-gallery-heading">
+            <div>
+              <p class="module-kicker">Galeria do módulo</p>
+              <h3>Telas capturadas do ambiente Docker de desenvolvimento.</h3>
+            </div>
+            <span>5 telas</span>
+          </div>
 
-        <article class="module-card">
-          <p class="module-kicker">Integrações</p>
-          <h3>SOAP, SMTP, LDAP e rotinas</h3>
-          <p>Serviços externos, autenticação corporativa, notificações e scripts operacionais.</p>
-        </article>
+          <div class="gallery-grid module-shot-grid">
+            <figure class="shot wide" data-group="plataforma" data-img="images/plataforma-modulo-dashboard.png" data-title="Dashboard da Plataforma PGE">
+              <img src="images/plataforma-modulo-dashboard.png" alt="Dashboard da Plataforma PGE com cards de ferramentas">
+              <figcaption>Dashboard de ferramentas</figcaption>
+            </figure>
+            <figure class="shot wide" data-group="plataforma" data-img="images/plataforma-modulo-central-admin.png" data-title="Central de Admin">
+              <img src="images/plataforma-modulo-central-admin.png" alt="Central de Admin com cards dos backends administrativos">
+              <figcaption>Central de Admin</figcaption>
+            </figure>
+            <figure class="shot" data-group="plataforma" data-img="images/plataforma-modulo-login.png" data-title="Login institucional">
+              <img src="images/plataforma-modulo-login.png" alt="Tela de login institucional da Plataforma PGE">
+              <figcaption>Login institucional</figcaption>
+            </figure>
+            <figure class="shot" data-group="plataforma" data-img="images/plataforma-modulo-perfil.png" data-title="Perfil do usuário">
+              <img src="images/plataforma-modulo-perfil.png" alt="Tela de perfil do usuário autenticado">
+              <figcaption>Perfil do usuário</figcaption>
+            </figure>
+            <figure class="shot" data-group="plataforma" data-img="images/plataforma-modulo-django-admin.png" data-title="Admin Django">
+              <img src="images/plataforma-modulo-django-admin.png" alt="Admin Django do backend da Plataforma PGE">
+              <figcaption>Admin Django</figcaption>
+            </figure>
+          </div>
+        </div>
+      </article>
 
-        <article class="module-card">
-          <p class="module-kicker">Operação</p>
-          <h3>Processos e atendimentos</h3>
-          <p>Fluxos administrativos para acompanhamento, comunicação interna e organização de demandas.</p>
-        </article>
-
-        <article class="module-card">
-          <p class="module-kicker">Eventos</p>
-          <h3>Inscrições e relatórios</h3>
-          <p>Controle de inscrições, exportações, confirmação de presença e páginas públicas.</p>
-        </article>
+      <div class="next-modules">
+        <p class="module-kicker">Próximos módulos para adicionar</p>
+        <div class="module-grid compact">
+          <article class="module-card">
+            <h3>Miner / Pareceres</h3>
+            <p>Busca documental, pareceres, revisão e integrações com bases externas.</p>
+          </article>
+          <article class="module-card">
+            <h3>Pautas de Audiência</h3>
+            <p>Filtros por órgão, relator, assunto, sessão, processo e calendário consolidado.</p>
+          </article>
+          <article class="module-card">
+            <h3>Reserva de Salas</h3>
+            <p>Agenda de salas e auditórios com status em tempo real e verificação de conflitos.</p>
+          </article>
+          <article class="module-card">
+            <h3>Eventos e atendimentos</h3>
+            <p>Inscrições, relatórios, chamados, comunicação interna e gestão operacional.</p>
+          </article>
+        </div>
       </div>
     </section>
 
@@ -198,56 +267,6 @@
             <span>SMTP</span>
           </div>
         </article>
-      </div>
-    </section>
-
-    <section class="section" id="galeria">
-      <div class="section-heading">
-        <p class="eyebrow">Galeria</p>
-        <h2>Telas reais dos sistemas.</h2>
-      </div>
-
-      <div class="gallery-toolbar" aria-label="Filtros da galeria">
-        <button class="filter active" type="button" data-filter="all">Todas</button>
-        <button class="filter" type="button" data-filter="miner">Miner</button>
-        <button class="filter" type="button" data-filter="plataforma">Plataforma</button>
-        <button class="filter" type="button" data-filter="pautas">Pautas</button>
-        <button class="filter" type="button" data-filter="reservas">Reservas</button>
-      </div>
-
-      <div class="gallery-grid">
-        <figure class="shot wide" data-group="plataforma" data-img="images/plataforma-02.png" data-title="Dashboard da Plataforma">
-          <img src="images/plataforma-02.png" alt="Dashboard da plataforma com ferramentas disponíveis">
-          <figcaption>Dashboard da Plataforma</figcaption>
-        </figure>
-        <figure class="shot wide" data-group="miner" data-img="images/miner-03.png" data-title="Consulta de Pareceres">
-          <img src="images/miner-03.png" alt="Consulta de pareceres com filtros e tabela de resultados">
-          <figcaption>Consulta de Pareceres</figcaption>
-        </figure>
-        <figure class="shot wide" data-group="pautas" data-img="images/plataforma-03.png" data-title="Pautas de Audiência">
-          <img src="images/plataforma-03.png" alt="Módulo de pautas de audiência com calendário e filtros">
-          <figcaption>Pautas de Audiência</figcaption>
-        </figure>
-        <figure class="shot" data-group="miner" data-img="images/miner-02.png" data-title="Busca e filtros">
-          <img src="images/miner-02.png" alt="Resultados de busca no Miner com filtros">
-          <figcaption>Busca e filtros</figcaption>
-        </figure>
-        <figure class="shot" data-group="miner" data-img="images/miner-06.png" data-title="Revisão lado a lado">
-          <img src="images/miner-06.png" alt="Tela de revisão com formulário e PDF lado a lado">
-          <figcaption>Revisão lado a lado</figcaption>
-        </figure>
-        <figure class="shot" data-group="reservas" data-img="images/plataforma-05.png" data-title="Reserva de Salas">
-          <img src="images/plataforma-05.png" alt="Módulo de reserva de salas">
-          <figcaption>Reserva de Salas</figcaption>
-        </figure>
-        <figure class="shot" data-group="reservas" data-img="images/plataforma-06.png" data-title="Detalhe de reserva">
-          <img src="images/plataforma-06.png" alt="Detalhe do módulo de reserva de salas">
-          <figcaption>Detalhe de reserva</figcaption>
-        </figure>
-        <figure class="shot" data-group="plataforma" data-img="images/plataforma-08.png" data-title="Rotina e API">
-          <img src="images/plataforma-08.png" alt="Execução de script ou API na plataforma">
-          <figcaption>Rotina e API</figcaption>
-        </figure>
       </div>
     </section>
 

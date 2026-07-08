@@ -4,6 +4,8 @@ const lightbox = document.getElementById("lightbox");
 const lightboxImage = lightbox?.querySelector("img");
 const lightboxTitle = lightbox?.querySelector("p");
 const closeButton = lightbox?.querySelector(".lightbox-close");
+const animatedRails = document.querySelectorAll(".module-shot-grid");
+const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
 filters.forEach((button) => {
   button.addEventListener("click", () => {
@@ -48,3 +50,51 @@ lightbox?.addEventListener("click", (event) => {
 document.addEventListener("keydown", (event) => {
   if (event.key === "Escape") closeLightbox();
 });
+
+if (!prefersReducedMotion) {
+  animatedRails.forEach((rail) => {
+    let paused = false;
+    let direction = 1;
+    let resumeTimeout = 0;
+
+    const pause = () => {
+      paused = true;
+      window.clearTimeout(resumeTimeout);
+    };
+
+    const scheduleResume = () => {
+      window.clearTimeout(resumeTimeout);
+      resumeTimeout = window.setTimeout(() => {
+        paused = false;
+      }, 1800);
+    };
+
+    rail.addEventListener("mouseenter", pause);
+    rail.addEventListener("mouseleave", scheduleResume);
+    rail.addEventListener("focusin", pause);
+    rail.addEventListener("focusout", scheduleResume);
+    rail.addEventListener("pointerdown", pause);
+    rail.addEventListener("scroll", scheduleResume, { passive: true });
+
+    const advance = () => {
+      const maxScroll = rail.scrollWidth - rail.clientWidth;
+
+      if (maxScroll <= 8 || paused || lightbox?.getAttribute("aria-hidden") === "false") {
+        return;
+      }
+
+      if (rail.scrollLeft >= maxScroll - 4) {
+        direction = -1;
+      } else if (rail.scrollLeft <= 4) {
+        direction = 1;
+      }
+
+      rail.scrollBy({
+        left: direction * Math.min(360, Math.max(220, rail.clientWidth * 0.32)),
+        behavior: "smooth",
+      });
+    };
+
+    window.setInterval(advance, 2600);
+  });
+}

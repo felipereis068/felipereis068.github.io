@@ -26,6 +26,7 @@
       <a href="#sistema-sap">SAP</a>
       <a href="#sistema-pareceres">Pareceres</a>
       <a href="#sistema-atendimento-profis">Atendimento</a>
+      <a href="#pareceres-ia">Pareceres IA</a>
       <a href="#stack">Stack</a>
       <a href="#contato">Contato</a>
     </nav>
@@ -57,8 +58,8 @@
 
     <section class="metrics" aria-label="Resumo do portfólio">
       <article>
-        <span>4 módulos</span>
-        <p>Plataforma, SAP, Pareceres e Atendimento Profis apresentados com telas e contexto técnico</p>
+        <span>5 módulos</span>
+        <p>Plataforma, SAP, Pareceres, Atendimento Profis e Pareceres IA apresentados com telas e contexto técnico</p>
       </article>
       <article>
         <span>Full stack</span>
@@ -564,6 +565,123 @@
         </div>
       </article>
 
+      <article class="module-showcase" id="pareceres-ia">
+        <div class="module-showcase-hero">
+          <div>
+            <p class="module-kicker">Módulo 05</p>
+            <h3>Pareceres IA</h3>
+            <p>
+              Serviço separado de IA para o ecossistema de Pareceres, expondo uma API RAG
+              compatível com o proxy do sistema principal. O módulo recebe documentos,
+              quebra conteúdo em chunks, pesquisa trechos por índice textual em português
+              e responde perguntas com citações para o documento e trecho utilizados.
+            </p>
+            <div class="module-actions">
+              <a class="button primary" href="#pareceres-ia-galeria">Ver telas do módulo</a>
+              <a class="button ghost" href="#stack">Ver stack técnica</a>
+            </div>
+          </div>
+          <figure class="module-cover">
+            <img src="images/pareceres-ia-modulo-search.png" alt="Resposta da API de busca do Pareceres IA">
+            <figcaption>Busca real em <code>/search</code>, retornando chunk, documento, parecer e score.</figcaption>
+          </figure>
+        </div>
+
+        <div class="module-info-grid">
+          <section>
+            <p class="module-kicker">O que entrega</p>
+            <ul class="clean-list">
+              <li>API independente para <code>/health</code>, <code>/ingest</code>, <code>/search</code> e <code>/ask</code></li>
+              <li>Ingestão de documentos vindos do Miner/Pareceres para base RAG</li>
+              <li>Chunking de texto bruto ou PDF e marcação de documentos processados</li>
+              <li>Busca full-text em português sobre <code>rag_chunks</code></li>
+              <li>Resposta com citações, arquivo, documento, chunk e score de relevância</li>
+            </ul>
+          </section>
+          <section>
+            <p class="module-kicker">API</p>
+            <div class="tags">
+              <span>FastAPI 0.115</span>
+              <span>Uvicorn</span>
+              <span>Pydantic</span>
+              <span>OpenAPI 3.1</span>
+              <span>Swagger UI</span>
+              <span>ReDoc</span>
+            </div>
+          </section>
+          <section>
+            <p class="module-kicker">Dados e busca</p>
+            <div class="tags">
+              <span>PostgreSQL 16</span>
+              <span>psycopg 3</span>
+              <span>FTS português</span>
+              <span>JSONB</span>
+              <span>pgcrypto</span>
+              <span>MinIO</span>
+            </div>
+          </section>
+          <section>
+            <p class="module-kicker">IA e operação</p>
+            <div class="tags">
+              <span>RAG</span>
+              <span>LLM compatível OpenAI</span>
+              <span>pypdf</span>
+              <span>httpx</span>
+              <span>Pytest</span>
+              <span>Docker Compose</span>
+            </div>
+          </section>
+        </div>
+
+        <div class="module-process">
+          <article>
+            <span>Compose de dev</span>
+            <p>Serviços <code>api</code>, <code>db</code> e <code>minio</code>, publicados em <code>8100</code>, <code>5441</code>, <code>9100</code> e <code>9101</code>.</p>
+          </article>
+          <article>
+            <span>Pipeline RAG</span>
+            <p><code>/ingest</code> seleciona <code>rag_documents</code>, carrega texto bruto ou PDF, cria chunks e registra o processamento no PostgreSQL.</p>
+          </article>
+          <article>
+            <span>Perguntas e citações</span>
+            <p><code>/ask</code> recupera chunks por relevância e monta resposta com citações; quando configurado, usa endpoint LLM compatível com OpenAI.</p>
+          </article>
+        </div>
+
+        <div class="module-gallery" id="pareceres-ia-galeria">
+          <div class="module-gallery-heading">
+            <div>
+              <p class="module-kicker">Galeria do módulo</p>
+              <h3>API RAG em execução, com documentação, saúde, busca, pergunta e armazenamento MinIO.</h3>
+            </div>
+            <span>5 telas</span>
+          </div>
+
+          <div class="gallery-grid module-shot-grid">
+            <figure class="shot wide" data-group="pareceres-ia" data-img="images/pareceres-ia-modulo-docs.png" data-title="Swagger UI">
+              <img src="images/pareceres-ia-modulo-docs.png" alt="Swagger UI do Pareceres IA com endpoints health, ingest, search e ask">
+              <figcaption>Swagger UI</figcaption>
+            </figure>
+            <figure class="shot" data-group="pareceres-ia" data-img="images/pareceres-ia-modulo-health.png" data-title="Health check">
+              <img src="images/pareceres-ia-modulo-health.png" alt="Resposta JSON do endpoint health do Pareceres IA">
+              <figcaption>Health check</figcaption>
+            </figure>
+            <figure class="shot wide" data-group="pareceres-ia" data-img="images/pareceres-ia-modulo-search.png" data-title="Busca RAG">
+              <img src="images/pareceres-ia-modulo-search.png" alt="Resposta da API search com chunk, documento, parecer e score">
+              <figcaption>Busca RAG</figcaption>
+            </figure>
+            <figure class="shot wide" data-group="pareceres-ia" data-img="images/pareceres-ia-modulo-ask.png" data-title="Pergunta com citações">
+              <img src="images/pareceres-ia-modulo-ask.png" alt="Resposta da API ask com citações e chunks recuperados">
+              <figcaption>Pergunta com citações</figcaption>
+            </figure>
+            <figure class="shot" data-group="pareceres-ia" data-img="images/pareceres-ia-modulo-minio.png" data-title="Console MinIO">
+              <img src="images/pareceres-ia-modulo-minio.png" alt="Console MinIO usado pelo Pareceres IA para armazenar documentos brutos">
+              <figcaption>MinIO</figcaption>
+            </figure>
+          </div>
+        </div>
+      </article>
+
       <div class="next-modules">
         <p class="module-kicker">Próximos módulos para adicionar</p>
         <div class="module-grid compact">
@@ -607,6 +725,7 @@
             <span>Python</span>
             <span>Django</span>
             <span>DRF</span>
+            <span>FastAPI</span>
             <span>SimpleJWT</span>
             <span>Gunicorn</span>
             <span>APIs REST</span>
@@ -618,6 +737,8 @@
             <span>PostgreSQL</span>
             <span>Oracle</span>
             <span>Elasticsearch</span>
+            <span>MinIO</span>
+            <span>RAG</span>
             <span>Firebase</span>
             <span>SQL</span>
           </div>
@@ -632,6 +753,7 @@
             <span>Harbor</span>
             <span>SOAP/Zeep</span>
             <span>LDAP</span>
+            <span>LLM APIs</span>
             <span>SMTP</span>
           </div>
         </article>

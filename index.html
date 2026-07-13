@@ -8,26 +8,33 @@
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/portfolio.css">
 </head>
 <body>
   <header class="site-header">
     <a class="brand" href="#top" aria-label="Início">
-      <span class="brand-mark">FR</span>
+      <span class="brand-mark">FR.</span>
       <span>
         <strong>Felipe Reis</strong>
-        <small>Full stack developer</small>
+        <small>Desenvolvedor de software</small>
       </span>
     </a>
     <nav class="top-nav" aria-label="Navegação principal">
-      <a href="#modulos">Módulos</a>
-      <a href="#plataforma-pge">Plataforma</a>
-      <a href="#sistema-sap">SAP</a>
-      <a href="#sistema-pareceres">Pareceres</a>
-      <a href="#sistema-atendimento-profis">Atendimento</a>
-      <a href="#pareceres-ia">Pareceres IA</a>
-      <a href="#sistema-cadastro-eventos">Eventos</a>
+      <div class="nav-projects">
+        <a class="nav-projects-trigger" href="#modulos" aria-haspopup="true">
+          Projetos <span aria-hidden="true">↓</span>
+        </a>
+        <div class="projects-menu" aria-label="Lista de projetos">
+          <a href="#plataforma-pge"><span>01</span> Plataforma PGE</a>
+          <a href="#sistema-sap"><span>02</span> Sistema SAP</a>
+          <a href="#sistema-pareceres"><span>03</span> Pareceres</a>
+          <a href="#sistema-atendimento-profis"><span>04</span> Atendimento Profis</a>
+          <a href="#pareceres-ia"><span>05</span> Pareceres IA</a>
+          <a href="#sistema-cadastro-eventos"><span>06</span> Cadastro de Eventos</a>
+        </div>
+      </div>
+      <a href="#sobre">Sobre</a>
       <a href="#stack">Stack</a>
       <a href="#contato">Contato</a>
     </nav>
@@ -36,31 +43,31 @@
   <main id="top">
     <section class="hero">
       <div class="hero-copy">
-        <p class="eyebrow">Portfólio técnico</p>
-        <h1>Projetos e módulos desenvolvidos.</h1>
+        <p class="eyebrow">Florianópolis, SC · 2026</p>
+        <h1>Eu construo software para resolver trabalho de verdade.</h1>
         <p class="hero-text">
-          Projetos web com telas reais, contexto técnico e fluxos completos: frontend,
-          backend, dados, automações, integrações e ambientes Docker.
+          Sou Luis Felipe Reis, desenvolvedor full stack. Transformo rotinas jurídicas e
+          administrativas em sistemas que as pessoas conseguem usar, manter e evoluir.
         </p>
         <div class="hero-actions" aria-label="Ações principais">
-          <a class="button primary" href="#modulos">Ver módulos</a>
-          <a class="button ghost" href="#plataforma-galeria">Ver telas</a>
+          <a class="button primary" href="#modulos">Conhecer os projetos ↘</a>
+          <a class="button ghost" href="mailto:felipereis068@gmail.com">Falar comigo</a>
         </div>
       </div>
 
       <div class="hero-preview" aria-label="Prévia visual dos sistemas">
         <img src="images/plataforma-modulo-dashboard.png" alt="Dashboard da Plataforma PGE com ferramentas disponíveis">
         <div class="preview-caption">
-          <span>Visão modular com telas reais e contexto técnico</span>
-          <strong>Next.js 15 + Django 5 + Docker</strong>
+          <span>Plataforma PGE — produto em operação</span>
+          <strong>01 / 06</strong>
         </div>
       </div>
     </section>
 
-    <section class="intro" aria-label="Apresentação profissional">
+    <section class="intro" id="sobre" aria-label="Apresentação profissional">
       <div>
-        <p class="eyebrow">Sobre mim</p>
-        <h2>Luis Felipe Reis, desenvolvedor full stack.</h2>
+        <p class="eyebrow">01 — Sobre</p>
+        <h2>Do problema de negócio ao container em produção.</h2>
       </div>
       <div class="intro-copy">
         <p>
@@ -68,21 +75,21 @@
           com frontend, backend, banco de dados, automações, integrações e infraestrutura
           preparada para execução em Docker.
         </p>
-        <p>
-          Tenho experiência prática com módulos administrativos, jurídicos, atendimento,
-          eventos, busca documental e IA aplicada com RAG, atuando também em Nginx,
-          APIs, pipelines de dados e ambientes replicáveis.
-        </p>
+        <p>Meu trabalho passa por entender o processo existente, reduzir etapas manuais e
+          entregar uma solução completa. Isso inclui interface, API, banco, integrações,
+          observabilidade e o ambiente Docker onde o sistema realmente roda.</p>
         <div class="intro-tags" aria-label="Tecnologias e frentes de atuação">
           <span>Next.js</span>
           <span>React</span>
           <span>Django</span>
           <span>FastAPI</span>
           <span>PostgreSQL</span>
+          <span>Oracle</span>
           <span>Elasticsearch</span>
           <span>Docker</span>
           <span>Nginx</span>
-          <span>IA / RAG</span>
+          <span>IA aplicada / RAG</span>
+          <span>OCR e documentos</span>
           <span>Integrações</span>
         </div>
       </div>
@@ -90,29 +97,29 @@
 
     <section class="metrics" aria-label="Resumo do portfólio">
       <article>
-        <span>6 módulos</span>
-        <p>Plataforma, SAP, Pareceres, Atendimento Profis, Pareceres IA e Eventos apresentados com telas e contexto técnico</p>
+        <span>06 projetos</span>
+        <p>Produtos apresentados como estudos de caso, com contexto, responsabilidade e telas reais.</p>
       </article>
       <article>
-        <span>Full stack</span>
-        <p>Frontend, backend, banco, integração e deploy</p>
+        <span>Ponta a ponta</span>
+        <p>Descoberta, interface, backend, banco de dados, integrações e deploy.</p>
       </article>
       <article>
-        <span>Docker</span>
-        <p>Ambientes replicáveis para desenvolvimento e produção</p>
+        <span>Ambiente real</span>
+        <p>Desenvolvimento e validação em containers próximos da produção.</p>
       </article>
     </section>
 
     <section class="section" id="modulos">
       <div class="section-heading">
-        <p class="eyebrow">Portfólio</p>
-        <h2>Projetos selecionados, organizados por entrega.</h2>
+        <p class="eyebrow">02 — Projetos selecionados</p>
+        <h2>Problema, implementação e resultado. Sem conceito fictício.</h2>
       </div>
 
       <article class="module-showcase" id="plataforma-pge">
         <div class="module-showcase-hero">
           <div>
-            <p class="module-kicker">Módulo 01</p>
+            <p class="module-kicker">01 / Plataforma institucional</p>
             <h3>Plataforma PGE</h3>
             <p>
               Hub institucional que centraliza sistemas internos da PGE-SC, autenticação,
@@ -603,10 +610,10 @@
             <p class="module-kicker">Módulo 05</p>
             <h3>Pareceres IA</h3>
             <p>
-              Serviço separado de IA para o ecossistema de Pareceres, expondo uma API RAG
-              compatível com o proxy do sistema principal. O módulo recebe documentos,
-              quebra conteúdo em chunks, pesquisa trechos por índice textual em português
-              e responde perguntas com citações para o documento e trecho utilizados.
+              Assistente jurídico conversacional conectado à base de pareceres. A experiência
+              agora reúne chat próprio, respostas transmitidas em tempo real, recuperação de
+              trechos relevantes e citações verificáveis. O modelo roda localmente com Ollama,
+              mantendo API, banco, documentos e inferência no mesmo ambiente Docker.
             </p>
             <div class="module-actions">
               <a class="button primary" href="#pareceres-ia-galeria">Ver telas do módulo</a>
@@ -614,8 +621,8 @@
             </div>
           </div>
           <figure class="module-cover">
-            <img src="images/pareceres-ia-modulo-search.png" alt="Resposta da API de busca do Pareceres IA">
-            <figcaption>Busca real em <code>/search</code>, retornando chunk, documento, parecer e score.</figcaption>
+            <img src="images/pareceres-ia-modulo-chat-resposta.png" alt="Conversa no Pareceres IA com resposta e citação do documento de origem">
+            <figcaption>Chat em execução com resposta gerada localmente e fonte recuperada da base.</figcaption>
           </figure>
         </div>
 
@@ -623,22 +630,23 @@
           <section>
             <p class="module-kicker">O que entrega</p>
             <ul class="clean-list">
-              <li>API independente para <code>/health</code>, <code>/ingest</code>, <code>/search</code> e <code>/ask</code></li>
+              <li>Interface de chat responsiva com temas claro e escuro</li>
+              <li>Resposta progressiva via <code>/ask/stream</code> e Server-Sent Events</li>
               <li>Ingestão de documentos vindos do Miner/Pareceres para base RAG</li>
               <li>Chunking de texto bruto ou PDF e marcação de documentos processados</li>
-              <li>Busca full-text em português sobre <code>rag_chunks</code></li>
-              <li>Resposta com citações, arquivo, documento, chunk e score de relevância</li>
+              <li>Citações expansíveis com arquivo, trecho e relevância da fonte</li>
+              <li>Nova conversa, sugestões de perguntas e estado online da API</li>
             </ul>
           </section>
           <section>
-            <p class="module-kicker">API</p>
+            <p class="module-kicker">Produto e API</p>
             <div class="tags">
+              <span>Chat SPA</span>
+              <span>HTML / CSS / JS</span>
               <span>FastAPI 0.115</span>
               <span>Uvicorn</span>
               <span>Pydantic</span>
-              <span>OpenAPI 3.1</span>
-              <span>Swagger UI</span>
-              <span>ReDoc</span>
+              <span>SSE Streaming</span>
             </div>
           </section>
           <section>
@@ -656,11 +664,14 @@
             <p class="module-kicker">IA e operação</p>
             <div class="tags">
               <span>RAG</span>
-              <span>LLM compatível OpenAI</span>
+              <span>Ollama</span>
+              <span>Qwen 2.5</span>
+              <span>API compatível OpenAI</span>
               <span>pypdf</span>
               <span>httpx</span>
               <span>Pytest</span>
               <span>Docker Compose</span>
+              <span>Backup / Restore</span>
             </div>
           </section>
         </div>
@@ -668,7 +679,7 @@
         <div class="module-process">
           <article>
             <span>Compose de dev</span>
-            <p>Serviços <code>api</code>, <code>db</code> e <code>minio</code>, publicados em <code>8100</code>, <code>5441</code>, <code>9100</code> e <code>9101</code>.</p>
+            <p>Serviços <code>api</code>, <code>db</code>, <code>minio</code> e <code>ollama</code>. A inferência fica isolada na rede interna e a interface abre em <code>8100</code>.</p>
           </article>
           <article>
             <span>Pipeline RAG</span>
@@ -676,7 +687,7 @@
           </article>
           <article>
             <span>Perguntas e citações</span>
-            <p><code>/ask</code> recupera chunks por relevância e monta resposta com citações; quando configurado, usa endpoint LLM compatível com OpenAI.</p>
+            <p>A busca recupera os trechos, o Qwen gera a síntese por streaming e o chat mantém cada afirmação ligada às fontes encontradas.</p>
           </article>
         </div>
 
@@ -684,31 +695,23 @@
           <div class="module-gallery-heading">
             <div>
               <p class="module-kicker">Galeria do módulo</p>
-              <h3>API RAG em execução, com documentação, saúde, busca, pergunta e armazenamento MinIO.</h3>
+              <h3>Nova experiência conversacional capturada no ambiente Docker com Ollama e base real.</h3>
             </div>
-            <span>5 telas</span>
+            <span>3 telas</span>
           </div>
 
           <div class="gallery-grid module-shot-grid">
-            <figure class="shot wide" data-group="pareceres-ia" data-img="images/pareceres-ia-modulo-docs.png" data-title="Swagger UI">
-              <img src="images/pareceres-ia-modulo-docs.png" alt="Swagger UI do Pareceres IA com endpoints health, ingest, search e ask">
-              <figcaption>Swagger UI</figcaption>
+            <figure class="shot wide" data-group="pareceres-ia" data-img="images/pareceres-ia-modulo-chat-inicial.png" data-title="Início do Pareceres IA">
+              <img src="images/pareceres-ia-modulo-chat-inicial.png" alt="Tela inicial clara do Pareceres IA com perguntas sugeridas e campo de conversa">
+              <figcaption>Início e perguntas sugeridas</figcaption>
             </figure>
-            <figure class="shot" data-group="pareceres-ia" data-img="images/pareceres-ia-modulo-health.png" data-title="Health check">
-              <img src="images/pareceres-ia-modulo-health.png" alt="Resposta JSON do endpoint health do Pareceres IA">
-              <figcaption>Health check</figcaption>
+            <figure class="shot wide" data-group="pareceres-ia" data-img="images/pareceres-ia-modulo-chat-resposta.png" data-title="Resposta com fonte">
+              <img src="images/pareceres-ia-modulo-chat-resposta.png" alt="Conversa real no Pareceres IA com resposta e trecho de origem expansível">
+              <figcaption>Resposta gerada e fonte consultada</figcaption>
             </figure>
-            <figure class="shot wide" data-group="pareceres-ia" data-img="images/pareceres-ia-modulo-search.png" data-title="Busca RAG">
-              <img src="images/pareceres-ia-modulo-search.png" alt="Resposta da API search com chunk, documento, parecer e score">
-              <figcaption>Busca RAG</figcaption>
-            </figure>
-            <figure class="shot wide" data-group="pareceres-ia" data-img="images/pareceres-ia-modulo-ask.png" data-title="Pergunta com citações">
-              <img src="images/pareceres-ia-modulo-ask.png" alt="Resposta da API ask com citações e chunks recuperados">
-              <figcaption>Pergunta com citações</figcaption>
-            </figure>
-            <figure class="shot" data-group="pareceres-ia" data-img="images/pareceres-ia-modulo-minio.png" data-title="Console MinIO">
-              <img src="images/pareceres-ia-modulo-minio.png" alt="Console MinIO usado pelo Pareceres IA para armazenar documentos brutos">
-              <figcaption>MinIO</figcaption>
+            <figure class="shot wide" data-group="pareceres-ia" data-img="images/pareceres-ia-modulo-chat-escuro.png" data-title="Tema escuro">
+              <img src="images/pareceres-ia-modulo-chat-escuro.png" alt="Tela inicial do Pareceres IA usando o tema escuro">
+              <figcaption>Tema escuro</figcaption>
             </figure>
           </div>
         </div>
@@ -872,13 +875,14 @@
 
     <section class="section stack-section" id="stack">
       <div class="section-heading compact">
-        <p class="eyebrow">Stack</p>
-        <h2>Base técnica direta, sem enfeite.</h2>
+        <p class="eyebrow">03 — Ferramentas</p>
+        <h2>Tecnologia é escolha de contexto, não coleção de logos.</h2>
       </div>
 
       <div class="stack-grid">
         <article>
           <h3>Frontend</h3>
+          <p>Interfaces administrativas, formulários complexos, tabelas operacionais e visualização de documentos.</p>
           <div class="tags">
             <span>Next.js</span>
             <span>React</span>
@@ -886,10 +890,13 @@
             <span>Radix UI</span>
             <span>Chakra UI</span>
             <span>React Hook Form</span>
+            <span>React Table</span>
+            <span>CKEditor</span>
           </div>
         </article>
         <article>
           <h3>Backend</h3>
+          <p>APIs, regras de negócio, autenticação, rotinas de importação e processamento em segundo plano.</p>
           <div class="tags">
             <span>Python</span>
             <span>Django</span>
@@ -901,28 +908,58 @@
           </div>
         </article>
         <article>
-          <h3>Dados e busca</h3>
+          <h3>IA e documentos</h3>
+          <p>IA aplicada à recuperação de informação jurídica, perguntas com fontes e processamento documental.</p>
           <div class="tags">
-            <span>PostgreSQL</span>
-            <span>Oracle</span>
-            <span>Elasticsearch</span>
-            <span>MinIO</span>
             <span>RAG</span>
-            <span>Firebase</span>
-            <span>SQL</span>
+            <span>IA generativa</span>
+            <span>LLM APIs</span>
+            <span>OpenAI compatible</span>
+            <span>Chunking</span>
+            <span>Busca contextual</span>
+            <span>OCR / Tesseract</span>
+            <span>PDFMiner</span>
+            <span>PyPDF2</span>
+            <span>MinIO</span>
           </div>
         </article>
         <article>
-          <h3>Infra e integrações</h3>
+          <h3>Bancos e busca</h3>
+          <p>Dados relacionais, fontes corporativas legadas e índices para pesquisa em alto volume.</p>
+          <div class="tags">
+            <span>PostgreSQL</span>
+            <span>Oracle Database</span>
+            <span>cx_Oracle / oracledb</span>
+            <span>SQL</span>
+            <span>Elasticsearch</span>
+            <span>Firebase</span>
+          </div>
+        </article>
+        <article>
+          <h3>Infraestrutura</h3>
+          <p>Ambientes reproduzíveis, publicação de aplicações e operação de serviços containerizados.</p>
           <div class="tags">
             <span>Docker</span>
             <span>Docker Compose</span>
             <span>Nginx</span>
+            <span>Kubernetes</span>
             <span>Rancher</span>
             <span>Harbor</span>
+            <span>Linux</span>
+            <span>Git / GitHub</span>
+          </div>
+        </article>
+        <article>
+          <h3>Integrações</h3>
+          <p>Comunicação com serviços institucionais, autenticação corporativa e sistemas jurídicos externos.</p>
+          <div class="tags">
+            <span>APIs REST</span>
             <span>SOAP/Zeep</span>
             <span>LDAP</span>
-            <span>LLM APIs</span>
+            <span>SGPE</span>
+            <span>EPROC</span>
+            <span>Gov.br SSO</span>
+            <span>Google Auth</span>
             <span>SMTP</span>
           </div>
         </article>
@@ -931,10 +968,23 @@
 
     <section class="contact" id="contato">
       <div>
-        <p class="eyebrow">Contato</p>
-        <h2>Portfólio pronto para evoluir junto com os próximos módulos.</h2>
+        <p class="eyebrow">04 — Contato</p>
+        <h2>Tem um processo complicado que precisa virar software?</h2>
       </div>
-      <a class="button primary" href="mailto:felipereis068@gmail.com">felipereis068@gmail.com</a>
+      <div class="contact-links" aria-label="Formas de contato">
+        <a href="https://wa.me/5548999737310" target="_blank" rel="noopener noreferrer">
+          <span>WhatsApp</span>
+          <strong>(48) 99973-7310 ↗</strong>
+        </a>
+        <a href="https://www.linkedin.com/in/luis-felipe-pereira-dos-reis/" target="_blank" rel="noopener noreferrer">
+          <span>LinkedIn</span>
+          <strong>Luis Felipe Reis ↗</strong>
+        </a>
+        <a href="mailto:felipereis068@gmail.com">
+          <span>E-mail</span>
+          <strong>felipereis068@gmail.com ↗</strong>
+        </a>
+      </div>
     </section>
   </main>
 

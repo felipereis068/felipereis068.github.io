@@ -610,10 +610,13 @@
             <p class="module-kicker">Módulo 05</p>
             <h3>Pareceres IA</h3>
             <p>
-              Assistente jurídico conversacional conectado à base de pareceres. A experiência
-              agora reúne chat próprio, respostas transmitidas em tempo real, recuperação de
-              trechos relevantes e citações verificáveis. O modelo roda localmente com Ollama,
-              mantendo API, banco, documentos e inferência no mesmo ambiente Docker.
+              Assistente jurídico conversacional (RAG) sobre uma base real de mais de
+              46 mil pareceres da PGE — cerca de 730 mil trechos indexados. A pessoa pergunta
+              em linguagem natural e recebe uma resposta transmitida em tempo real e
+              fundamentada, com citação verificável do parecer de origem. A busca full-text
+              foi otimizada para responder em menos de 0,5s mesmo nessa escala, e todo o
+              modelo roda localmente com Ollama — API, banco, documentos e inferência no
+              mesmo ambiente Docker, sem enviar dados sensíveis para fora.
             </p>
             <div class="module-actions">
               <a class="button primary" href="#pareceres-ia-galeria">Ver telas do módulo</a>
@@ -632,10 +635,11 @@
             <ul class="clean-list">
               <li>Interface de chat responsiva com temas claro e escuro</li>
               <li>Resposta progressiva via <code>/ask/stream</code> e Server-Sent Events</li>
-              <li>Ingestão de documentos vindos do Miner/Pareceres para base RAG</li>
-              <li>Chunking de texto bruto ou PDF e marcação de documentos processados</li>
+              <li>Histórico de conversas persistente, com barra lateral e títulos automáticos</li>
+              <li>Busca insensível a acento e ranqueada por relevância em ~730 mil trechos</li>
+              <li>Ingestão em lote resumível de mais de 46 mil pareceres (Miner/Pareceres)</li>
               <li>Citações expansíveis com arquivo, trecho e relevância da fonte</li>
-              <li>Nova conversa, sugestões de perguntas e estado online da API</li>
+              <li>Backup/restore versionado para migrar a base entre máquinas</li>
             </ul>
           </section>
           <section>
@@ -655,8 +659,10 @@
               <span>PostgreSQL 16</span>
               <span>psycopg 3</span>
               <span>FTS português</span>
+              <span>tsvector + GIN</span>
+              <span>unaccent</span>
+              <span>Busca híbrida AND/OR</span>
               <span>JSONB</span>
-              <span>pgcrypto</span>
               <span>MinIO</span>
             </div>
           </section>
@@ -665,9 +671,9 @@
             <div class="tags">
               <span>RAG</span>
               <span>Ollama</span>
-              <span>Qwen 2.5</span>
+              <span>Qwen 2.5 (3B)</span>
               <span>API compatível OpenAI</span>
-              <span>pypdf</span>
+              <span>PyMuPDF</span>
               <span>httpx</span>
               <span>Pytest</span>
               <span>Docker Compose</span>
@@ -678,16 +684,16 @@
 
         <div class="module-process">
           <article>
-            <span>Compose de dev</span>
-            <p>Serviços <code>api</code>, <code>db</code>, <code>minio</code> e <code>ollama</code>. A inferência fica isolada na rede interna e a interface abre em <code>8100</code>.</p>
+            <span>Ingestão em escala</span>
+            <p>Pipeline resumível que sobe os PDFs ao MinIO, extrai texto com <strong>PyMuPDF</strong> (20–40× mais rápido que a extração anterior) e gera ~730 mil chunks a partir de 46 mil pareceres.</p>
           </article>
           <article>
-            <span>Pipeline RAG</span>
-            <p><code>/ingest</code> seleciona <code>rag_documents</code>, carrega texto bruto ou PDF, cria chunks e registra o processamento no PostgreSQL.</p>
+            <span>Busca em &lt;0,5s</span>
+            <p>Coluna <code>tsvector</code> materializada com índice GIN e estratégia híbrida <em>AND→OR</em> derrubaram a recuperação de dezenas de segundos para menos de meio segundo, com relevância maior.</p>
           </article>
           <article>
-            <span>Perguntas e citações</span>
-            <p>A busca recupera os trechos, o Qwen gera a síntese por streaming e o chat mantém cada afirmação ligada às fontes encontradas.</p>
+            <span>Resposta e memória</span>
+            <p>O Qwen 2.5 sintetiza por streaming usando só os trechos recuperados (com citação verificável), e cada conversa fica salva no histórico — tudo local, sem nuvem externa.</p>
           </article>
         </div>
 
@@ -913,11 +919,16 @@
           <div class="tags">
             <span>RAG</span>
             <span>IA generativa</span>
+            <span>LLM local (Ollama)</span>
+            <span>Qwen 2.5</span>
             <span>LLM APIs</span>
             <span>OpenAI compatible</span>
+            <span>Prompt engineering</span>
             <span>Chunking</span>
             <span>Busca contextual</span>
+            <span>SSE streaming</span>
             <span>OCR / Tesseract</span>
+            <span>PyMuPDF</span>
             <span>PDFMiner</span>
             <span>PyPDF2</span>
             <span>MinIO</span>

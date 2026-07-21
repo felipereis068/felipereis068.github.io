@@ -101,8 +101,7 @@ code {
   display: grid;
   grid-template-columns: minmax(0, 760px);
   align-items: center;
-  min-height: calc(100vh - 76px);
-  padding: 72px 0 80px;
+  padding: 96px 0;
 }
 .eyebrow, .module-kicker {
   margin: 0 0 18px;

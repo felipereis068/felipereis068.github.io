@@ -56,6 +56,21 @@ code {
   text-decoration: none;
 }
 .top-nav a:hover { color: var(--accent); }
+.language-toggle {
+  min-width: 38px;
+  padding: 7px 9px;
+  border: 1px solid var(--ink);
+  background: transparent;
+  color: var(--ink);
+  font: 500 11px/1 "IBM Plex Mono", monospace;
+  cursor: pointer;
+}
+.language-toggle:hover, .language-toggle:focus-visible {
+  border-color: var(--accent);
+  background: var(--accent);
+  color: var(--white);
+  outline: none;
+}
 .nav-projects { position: relative; }
 .nav-projects-trigger { display: flex; align-items: center; gap: 7px; padding: 20px 0; }
 .nav-projects-trigger span { color: var(--accent); transition: transform .15s ease; }

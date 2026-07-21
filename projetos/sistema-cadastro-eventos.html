@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sistema de Cadastro de Eventos | Felipe Reis</title>
+  <meta name="description" content="Plataforma Quórum para publicação, inscrição e operação de cursos e eventos. O módulo reúne vitrine pública, página de detalhes, formulário de inscrição, gestão administrativa,…">
+  <meta property="og:title" content="Sistema de Cadastro de Eventos | Felipe Reis">
+  <meta property="og:description" content="Plataforma Quórum para publicação, inscrição e operação de cursos e eventos. O módulo reúne vitrine pública, página de detalhes, formulário de inscrição, gestão administrativa,…">
+  <meta property="og:type" content="article">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/portfolio.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="../" aria-label="Início">
+      <span class="brand-mark">FR.</span>
+      <span>
+        <strong>Felipe Reis</strong>
+        <small>Desenvolvedor de software</small>
+      </span>
+    </a>
+    <nav class="top-nav" aria-label="Navegação principal">
+      <div class="nav-projects">
+        <a class="nav-projects-trigger" href="../#modulos" aria-haspopup="true">
+          Projetos <span aria-hidden="true">↓</span>
+        </a>
+        <div class="projects-menu" aria-label="Lista de projetos">
+          <a href="../projetos/plataforma-pge.html"><span>01</span> Plataforma PGE</a>
+          <a href="../projetos/sistema-sap.html"><span>02</span> Sistema SAP</a>
+          <a href="../projetos/sistema-pareceres.html"><span>03</span> Pareceres</a>
+          <a href="../projetos/sistema-atendimento-profis.html"><span>04</span> Atendimento Profis</a>
+          <a href="../projetos/pareceres-ia.html"><span>05</span> Pareceres IA</a>
+          <a href="../projetos/sistema-cadastro-eventos.html" class="is-current"><span>06</span> Sistema de Cadastro de Eventos</a>
+        </div>
+      </div>
+      <a href="../#sobre">Sobre</a>
+      <a href="../#stack">Stack</a>
+      <a href="../#contato">Contato</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="section project-page">
+      <a class="back-link" href="../#modulos">← Todos os projetos</a>
+      <article class="module-showcase" id="sistema-cadastro-eventos">
+        <div class="module-showcase-hero">
+          <div>
+            <p class="module-kicker">Módulo 06</p>
+            <h3>Sistema de Cadastro de Eventos</h3>
+            <p>
+              Plataforma Quórum para publicação, inscrição e operação de cursos e eventos.
+              O módulo reúne vitrine pública, página de detalhes, formulário de inscrição,
+              gestão administrativa, participantes, presença por QR Code, lembretes,
+              exportação de listas e geração de certificados.
+            </p>
+            <div class="module-actions">
+              <a class="button primary" href="#eventos-galeria">Ver telas do módulo</a>
+              <a class="button ghost" href="../#stack">Ver stack técnica</a>
+            </div>
+          </div>
+          <figure class="module-cover">
+            <img src="../images/eventos-modulo-inicio.png" alt="Página inicial pública do Sistema de Cadastro de Eventos" loading="lazy">
+            <figcaption>Vitrine pública do Quórum com busca, filtros por órgão/local e eventos reais.</figcaption>
+          </figure>
+        </div>
+
+        <div class="module-info-grid">
+          <section>
+            <p class="module-kicker">O que entrega</p>
+            <ul class="clean-list">
+              <li>Vitrine pública de cursos e eventos com filtros por órgão, local e inscrições</li>
+              <li>Detalhe de evento com programação, turmas, local, datas e contato</li>
+              <li>Formulário público de inscrição com dados pessoais, profissionais e turma</li>
+              <li>Gestão administrativa de eventos, banners, publicação e links diretos</li>
+              <li>Participantes, confirmação, presença, Excel, WhatsApp, lembretes e certificados</li>
+            </ul>
+          </section>
+          <section>
+            <p class="module-kicker">Frontend</p>
+            <div class="tags">
+              <span>Next.js 14.2</span>
+              <span>React 18</span>
+              <span>TypeScript 5.5</span>
+              <span>Radix UI</span>
+              <span>Tiptap</span>
+              <span>lucide-react</span>
+            </div>
+          </section>
+          <section>
+            <p class="module-kicker">Backend e dados</p>
+            <div class="tags">
+              <span>Django 5</span>
+              <span>Django REST Framework</span>
+              <span>PostgreSQL 16</span>
+              <span>psycopg2</span>
+              <span>Gunicorn</span>
+              <span>CORS</span>
+            </div>
+          </section>
+          <section>
+            <p class="module-kicker">Operação</p>
+            <div class="tags">
+              <span>Plataforma SSO</span>
+              <span>Mailpit</span>
+              <span>QR Code</span>
+              <span>Pillow</span>
+              <span>PyMuPDF</span>
+              <span>Docker Compose</span>
+            </div>
+          </section>
+        </div>
+
+        <div class="module-process">
+          <article>
+            <span>Compose de dev</span>
+            <p>Serviços <code>frontend</code>, <code>backend</code>, <code>db</code> e <code>mailpit</code>, publicados em <code>3001</code>, <code>8001</code>, <code>5433</code> e <code>8026</code>.</p>
+          </article>
+          <article>
+            <span>Fluxo público</span>
+            <p>O visitante encontra o evento, abre detalhes, escolhe turma e envia inscrição com dados pessoais, profissionais e contato.</p>
+          </article>
+          <article>
+            <span>Fluxo administrativo</span>
+            <p>A gestão controla eventos por órgão, acompanha participantes, exporta listas, envia lembretes e opera presença/certificados por QR Code.</p>
+          </article>
+        </div>
+
+        <div class="module-gallery" id="eventos-galeria">
+          <div class="module-gallery-heading">
+            <div>
+              <p class="module-kicker">Galeria do módulo</p>
+              <h3>Telas reais capturadas do Sistema de Cadastro de Eventos em execução local.</h3>
+            </div>
+            <span>11 telas</span>
+          </div>
+
+          <div class="gallery-grid module-shot-grid">
+            <figure class="shot wide" data-group="eventos" data-img="../images/eventos-modulo-inicio.png" data-title="Início público">
+              <img src="../images/eventos-modulo-inicio.png" alt="Início público do Quórum com busca e cards de eventos" loading="lazy">
+              <figcaption>Início público</figcaption>
+            </figure>
+            <figure class="shot wide" data-group="eventos" data-img="../images/eventos-modulo-detalhe.png" data-title="Detalhe do evento">
+              <img src="../images/eventos-modulo-detalhe.png" alt="Detalhe do evento com resumo, programação, turmas e botão de inscrição" loading="lazy">
+              <figcaption>Detalhe do evento</figcaption>
+            </figure>
+            <figure class="shot wide" data-group="eventos" data-img="../images/eventos-modulo-inscricao.png" data-title="Formulário de inscrição">
+              <img src="../images/eventos-modulo-inscricao.png" alt="Formulário público de inscrição com seleção de turma e dados do participante" loading="lazy">
+              <figcaption>Formulário de inscrição</figcaption>
+            </figure>
+            <figure class="shot wide" data-group="eventos" data-img="../images/eventos-modulo-inscricao-sucesso.png" data-title="Sucesso da inscrição">
+              <img src="../images/eventos-modulo-inscricao-sucesso.png" alt="Modal de inscrição realizada com sucesso" loading="lazy">
+              <figcaption>Sucesso da inscrição</figcaption>
+            </figure>
+            <figure class="shot wide" data-group="eventos" data-img="../images/eventos-modulo-gerenciar.png" data-title="Gerenciar eventos">
+              <img src="../images/eventos-modulo-gerenciar.png" alt="Tela administrativa de gerenciamento de eventos com cards, publicação e links diretos" loading="lazy">
+              <figcaption>Gerenciar eventos</figcaption>
+            </figure>
+            <figure class="shot wide" data-group="eventos" data-img="../images/eventos-modulo-presenca-qrcode.png" data-title="Presença por QR Code">
+              <img src="../images/eventos-modulo-presenca-qrcode.png" alt="Tela de check-in de presença com scanner ativo e QR Code de auto check-in do participante" loading="lazy">
+              <figcaption>Presença por QR Code</figcaption>
+            </figure>
+            <figure class="shot wide" data-group="eventos" data-img="../images/eventos-modulo-inscricoes-acoes.png" data-title="Painel de inscrições">
+              <img src="../images/eventos-modulo-inscricoes-acoes.png" alt="Painel de inscrições com botões para certificados, lembrete, WhatsApp e Excel" loading="lazy">
+              <figcaption>Painel de inscrições</figcaption>
+            </figure>
+            <figure class="shot wide" data-group="eventos" data-img="../images/eventos-modulo-certificados-painel.png" data-title="Certificados no painel">
+              <img src="../images/eventos-modulo-certificados-painel.png" alt="Detalhe de inscrição no painel mostrando presença, confirmação e certificado gerado" loading="lazy">
+              <figcaption>Certificados no painel</figcaption>
+            </figure>
+            <figure class="shot wide" data-group="eventos" data-img="../images/eventos-modulo-meu-certificado.png" data-title="Busca de certificado">
+              <img src="../images/eventos-modulo-meu-certificado.png" alt="Página pública Meu certificado com resultado de busca" loading="lazy">
+              <figcaption>Busca de certificado</figcaption>
+            </figure>
+            <figure class="shot wide" data-group="eventos" data-img="../images/eventos-modulo-certificado-publico.png" data-title="Certificado público">
+              <img src="../images/eventos-modulo-certificado-publico.png" alt="Página pública de certificado com prévia e botões para baixar PNG e PDF" loading="lazy">
+              <figcaption>Certificado público</figcaption>
+            </figure>
+            <figure class="shot wide" data-group="eventos" data-img="../images/eventos-modulo-validar-certificado.png" data-title="Validação de certificado">
+              <img src="../images/eventos-modulo-validar-certificado.png" alt="Página de validação de certificado mostrando certificado válido e dados do participante" loading="lazy">
+              <figcaption>Validação de certificado</figcaption>
+            </figure>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <section class="contact" id="contato">
+      <div>
+        <p class="eyebrow">Contato</p>
+        <h2>Tem um processo complicado que precisa virar software?</h2>
+      </div>
+      <div class="contact-links" aria-label="Formas de contato">
+        <a href="https://wa.me/5548999737310" target="_blank" rel="noopener noreferrer">
+          <span>WhatsApp</span>
+          <strong>(48) 99973-7310 ↗</strong>
+        </a>
+        <a href="https://www.linkedin.com/in/luis-felipe-pereira-dos-reis/" target="_blank" rel="noopener noreferrer">
+          <span>LinkedIn</span>
+          <strong>Luis Felipe Reis ↗</strong>
+        </a>
+        <a href="mailto:felipereis068@gmail.com">
+          <span>E-mail</span>
+          <strong>felipereis068@gmail.com ↗</strong>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lightbox-close" type="button" aria-label="Fechar imagem">Fechar</button>
+    <img src="" alt="">
+    <p></p>
+  </div>
+
+  <script src="../assets/portfolio.js"></script>
+</body>
+</html>

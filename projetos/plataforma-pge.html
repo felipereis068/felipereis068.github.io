@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plataforma PGE | Felipe Reis</title>
+  <meta name="description" content="Hub institucional que centraliza sistemas internos da PGE-SC, autenticação, permissões, favoritos, notificações e atalhos para módulos administrativos e jurídicos. O módulo funciona…">
+  <meta property="og:title" content="Plataforma PGE | Felipe Reis">
+  <meta property="og:description" content="Hub institucional que centraliza sistemas internos da PGE-SC, autenticação, permissões, favoritos, notificações e atalhos para módulos administrativos e jurídicos. O módulo funciona…">
+  <meta property="og:type" content="article">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/portfolio.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="../" aria-label="Início">
+      <span class="brand-mark">FR.</span>
+      <span>
+        <strong>Felipe Reis</strong>
+        <small>Desenvolvedor de software</small>
+      </span>
+    </a>
+    <nav class="top-nav" aria-label="Navegação principal">
+      <div class="nav-projects">
+        <a class="nav-projects-trigger" href="../#modulos" aria-haspopup="true">
+          Projetos <span aria-hidden="true">↓</span>
+        </a>
+        <div class="projects-menu" aria-label="Lista de projetos">
+          <a href="../projetos/plataforma-pge.html" class="is-current"><span>01</span> Plataforma PGE</a>
+          <a href="../projetos/sistema-sap.html"><span>02</span> Sistema SAP</a>
+          <a href="../projetos/sistema-pareceres.html"><span>03</span> Pareceres</a>
+          <a href="../projetos/sistema-atendimento-profis.html"><span>04</span> Atendimento Profis</a>
+          <a href="../projetos/pareceres-ia.html"><span>05</span> Pareceres IA</a>
+          <a href="../projetos/sistema-cadastro-eventos.html"><span>06</span> Sistema de Cadastro de Eventos</a>
+        </div>
+      </div>
+      <a href="../#sobre">Sobre</a>
+      <a href="../#stack">Stack</a>
+      <a href="../#contato">Contato</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="section project-page">
+      <a class="back-link" href="../#modulos">← Todos os projetos</a>
+      <article class="module-showcase" id="plataforma-pge">
+        <div class="module-showcase-hero">
+          <div>
+            <p class="module-kicker">01 / Plataforma institucional</p>
+            <h3>Plataforma PGE</h3>
+            <p>
+              Hub institucional que centraliza sistemas internos da PGE-SC, autenticação,
+              permissões, favoritos, notificações e atalhos para módulos administrativos e
+              jurídicos. O módulo funciona como porta de entrada para ferramentas como
+              Pareceres, Atos Normativos, Pautas, SAP, Reserva de Salas, Eventos, Chamados,
+              Atendimento Profis e Contratos.
+            </p>
+            <div class="module-actions">
+              <a class="button primary" href="#plataforma-galeria">Ver telas do módulo</a>
+              <a class="button ghost" href="../#stack">Ver stack técnica</a>
+            </div>
+          </div>
+          <figure class="module-cover">
+            <img src="../images/plataforma-modulo-dashboard.png" alt="Dashboard da Plataforma PGE com ferramentas disponíveis" loading="lazy">
+            <figcaption>Dashboard principal com cards dos sistemas disponíveis.</figcaption>
+          </figure>
+        </div>
+
+        <div class="module-info-grid">
+          <section>
+            <p class="module-kicker">O que entrega</p>
+            <ul class="clean-list">
+              <li>Login institucional com credenciais locais, Google e Gov.br</li>
+              <li>Dashboard unificado para entrada nos sistemas corporativos</li>
+              <li>Central de Admin para acessar backends administrativos</li>
+              <li>Perfil do usuário, sessão, permissões e navegação protegida</li>
+              <li>Integração com módulos externos por URLs de ambiente</li>
+            </ul>
+          </section>
+          <section>
+            <p class="module-kicker">Frontend</p>
+            <div class="tags">
+              <span>Next.js 15.5</span>
+              <span>React 18</span>
+              <span>TypeScript 5</span>
+              <span>Radix UI</span>
+              <span>lucide-react</span>
+              <span>React Hook Form</span>
+              <span>Sonner</span>
+            </div>
+          </section>
+          <section>
+            <p class="module-kicker">Backend e dados</p>
+            <div class="tags">
+              <span>Django 5.1</span>
+              <span>Django REST Framework</span>
+              <span>SimpleJWT</span>
+              <span>PostgreSQL 16</span>
+              <span>Gunicorn</span>
+              <span>Whitenoise</span>
+            </div>
+          </section>
+          <section>
+            <p class="module-kicker">Infra e integrações</p>
+            <div class="tags">
+              <span>Docker Compose</span>
+              <span>LDAP</span>
+              <span>Google Auth</span>
+              <span>Gov.br SSO</span>
+              <span>SOAP/Zeep</span>
+              <span>Cookies httpOnly</span>
+            </div>
+          </section>
+        </div>
+
+        <div class="module-process">
+          <article>
+            <span>Compose de dev</span>
+            <p>Serviços <code>frontend</code>, <code>backend</code> e <code>db</code>, com Next.js em <code>3000</code>, Django em <code>8000</code> e PostgreSQL em <code>5432</code>.</p>
+          </article>
+          <article>
+            <span>Controle de acesso</span>
+            <p>JWT, cookies httpOnly, usuário autenticado, grupos administrativos e bloqueio de ferramentas sem permissão.</p>
+          </article>
+          <article>
+            <span>Operação</span>
+            <p>Centraliza URLs de sistemas satélites e mantém a experiência de entrada única para módulos internos.</p>
+          </article>
+        </div>
+
+        <div class="module-gallery" id="plataforma-galeria">
+          <div class="module-gallery-heading">
+            <div>
+              <p class="module-kicker">Galeria do módulo</p>
+              <h3>Telas capturadas do ambiente Docker de desenvolvimento.</h3>
+            </div>
+            <span>5 telas</span>
+          </div>
+
+          <div class="gallery-grid module-shot-grid">
+            <figure class="shot wide" data-group="plataforma" data-img="../images/plataforma-modulo-dashboard.png" data-title="Dashboard da Plataforma PGE">
+              <img src="../images/plataforma-modulo-dashboard.png" alt="Dashboard da Plataforma PGE com cards de ferramentas" loading="lazy">
+              <figcaption>Dashboard de ferramentas</figcaption>
+            </figure>
+            <figure class="shot wide" data-group="plataforma" data-img="../images/plataforma-modulo-central-admin.png" data-title="Central de Admin">
+              <img src="../images/plataforma-modulo-central-admin.png" alt="Central de Admin com cards dos backends administrativos" loading="lazy">
+              <figcaption>Central de Admin</figcaption>
+            </figure>
+            <figure class="shot" data-group="plataforma" data-img="../images/plataforma-modulo-login.png" data-title="Login institucional">
+              <img src="../images/plataforma-modulo-login.png" alt="Tela de login institucional da Plataforma PGE" loading="lazy">
+              <figcaption>Login institucional</figcaption>
+            </figure>
+            <figure class="shot" data-group="plataforma" data-img="../images/plataforma-modulo-perfil.png" data-title="Perfil do usuário">
+              <img src="../images/plataforma-modulo-perfil.png" alt="Tela de perfil do usuário autenticado" loading="lazy">
+              <figcaption>Perfil do usuário</figcaption>
+            </figure>
+            <figure class="shot" data-group="plataforma" data-img="../images/plataforma-modulo-django-admin.png" data-title="Admin Django">
+              <img src="../images/plataforma-modulo-django-admin.png" alt="Admin Django do backend da Plataforma PGE" loading="lazy">
+              <figcaption>Admin Django</figcaption>
+            </figure>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <section class="contact" id="contato">
+      <div>
+        <p class="eyebrow">Contato</p>
+        <h2>Tem um processo complicado que precisa virar software?</h2>
+      </div>
+      <div class="contact-links" aria-label="Formas de contato">
+        <a href="https://wa.me/5548999737310" target="_blank" rel="noopener noreferrer">
+          <span>WhatsApp</span>
+          <strong>(48) 99973-7310 ↗</strong>
+        </a>
+        <a href="https://www.linkedin.com/in/luis-felipe-pereira-dos-reis/" target="_blank" rel="noopener noreferrer">
+          <span>LinkedIn</span>
+          <strong>Luis Felipe Reis ↗</strong>
+        </a>
+        <a href="mailto:felipereis068@gmail.com">
+          <span>E-mail</span>
+          <strong>felipereis068@gmail.com ↗</strong>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lightbox-close" type="button" aria-label="Fechar imagem">Fechar</button>
+    <img src="" alt="">
+    <p></p>
+  </div>
+
+  <script src="../assets/portfolio.js"></script>
+</body>
+</html>

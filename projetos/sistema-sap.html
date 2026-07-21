@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sistema SAP | Felipe Reis</title>
+  <meta name="description" content="Sistema de acompanhamento de processos SGPE integrado à Plataforma PGE. O módulo organiza processos por setor, prioridade, situação, responsáveis, observações e favoritos, com…">
+  <meta property="og:title" content="Sistema SAP | Felipe Reis">
+  <meta property="og:description" content="Sistema de acompanhamento de processos SGPE integrado à Plataforma PGE. O módulo organiza processos por setor, prioridade, situação, responsáveis, observações e favoritos, com…">
+  <meta property="og:type" content="article">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/portfolio.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="../" aria-label="Início">
+      <span class="brand-mark">FR.</span>
+      <span>
+        <strong>Felipe Reis</strong>
+        <small>Desenvolvedor de software</small>
+      </span>
+    </a>
+    <nav class="top-nav" aria-label="Navegação principal">
+      <div class="nav-projects">
+        <a class="nav-projects-trigger" href="../#modulos" aria-haspopup="true">
+          Projetos <span aria-hidden="true">↓</span>
+        </a>
+        <div class="projects-menu" aria-label="Lista de projetos">
+          <a href="../projetos/plataforma-pge.html"><span>01</span> Plataforma PGE</a>
+          <a href="../projetos/sistema-sap.html" class="is-current"><span>02</span> Sistema SAP</a>
+          <a href="../projetos/sistema-pareceres.html"><span>03</span> Pareceres</a>
+          <a href="../projetos/sistema-atendimento-profis.html"><span>04</span> Atendimento Profis</a>
+          <a href="../projetos/pareceres-ia.html"><span>05</span> Pareceres IA</a>
+          <a href="../projetos/sistema-cadastro-eventos.html"><span>06</span> Sistema de Cadastro de Eventos</a>
+        </div>
+      </div>
+      <a href="../#sobre">Sobre</a>
+      <a href="../#stack">Stack</a>
+      <a href="../#contato">Contato</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="section project-page">
+      <a class="back-link" href="../#modulos">← Todos os projetos</a>
+      <article class="module-showcase" id="sistema-sap">
+        <div class="module-showcase-hero">
+          <div>
+            <p class="module-kicker">Módulo 02</p>
+            <h3>Sistema SAP</h3>
+            <p>
+              Sistema de acompanhamento de processos SGPE integrado à Plataforma PGE.
+              O módulo organiza processos por setor, prioridade, situação, responsáveis,
+              observações e favoritos, com atualização automática pelo scheduler e ações
+              operacionais para concluir, reabrir, editar e sincronizar registros.
+            </p>
+            <div class="module-actions">
+              <a class="button primary" href="#sap-galeria">Ver telas do módulo</a>
+              <a class="button ghost" href="../#stack">Ver stack técnica</a>
+            </div>
+          </div>
+          <figure class="module-cover">
+            <img src="../images/sap-modulo-lista.png" alt="Lista de processos do Sistema SAP" loading="lazy">
+            <figcaption>Lista operacional com métricas, filtros, colunas e ações por processo.</figcaption>
+          </figure>
+        </div>
+
+        <div class="module-info-grid">
+          <section>
+            <p class="module-kicker">O que entrega</p>
+            <ul class="clean-list">
+              <li>Acompanhamento de processos SGPE por setor do usuário</li>
+              <li>Tabela com prioridade, responsáveis, observações e ações rápidas</li>
+              <li>Filtro geral, favoritos, processos concluídos e preferências de colunas</li>
+              <li>Notificações, comentários e histórico de observações por processo</li>
+              <li>Scheduler backend para sincronização automática com SGPE/Boavista</li>
+            </ul>
+          </section>
+          <section>
+            <p class="module-kicker">Frontend</p>
+            <div class="tags">
+              <span>Next.js 15.5</span>
+              <span>React 18</span>
+              <span>TypeScript 5</span>
+              <span>Radix UI</span>
+              <span>lucide-react</span>
+              <span>React Hook Form</span>
+              <span>Recharts</span>
+            </div>
+          </section>
+          <section>
+            <p class="module-kicker">Backend e dados</p>
+            <div class="tags">
+              <span>Django 5.1</span>
+              <span>Django REST Framework</span>
+              <span>PostgreSQL 16</span>
+              <span>SimpleJWT</span>
+              <span>django-auth-ldap</span>
+              <span>Docxtpl</span>
+            </div>
+          </section>
+          <section>
+            <p class="module-kicker">Integrações</p>
+            <div class="tags">
+              <span>SGPE SOAP/Zeep</span>
+              <span>Boavista Impyla</span>
+              <span>Plataforma SSO</span>
+              <span>Scheduler</span>
+              <span>Docker Compose</span>
+              <span>LibreOffice</span>
+            </div>
+          </section>
+        </div>
+
+        <div class="module-process">
+          <article>
+            <span>Compose de dev</span>
+            <p>Serviços <code>frontend</code>, <code>backend</code>, <code>scheduler</code> e <code>db</code>, publicados em <code>3004</code>, <code>8004</code> e <code>5436</code>.</p>
+          </article>
+          <article>
+            <span>Sincronização</span>
+            <p>O scheduler executa <code>sincronizar_processos_periodicamente</code> e atualiza os processos cadastrados no backend.</p>
+          </article>
+          <article>
+            <span>Modelo operacional</span>
+            <p>Processos ficam no PostgreSQL com setor, distribuição, responsável, observações, tramitações, notificações e estado de arquivamento.</p>
+          </article>
+        </div>
+
+        <div class="module-gallery" id="sap-galeria">
+          <div class="module-gallery-heading">
+            <div>
+              <p class="module-kicker">Galeria do módulo</p>
+              <h3>Telas capturadas do SAP rodando em Docker Compose.</h3>
+            </div>
+            <span>7 telas</span>
+          </div>
+
+          <div class="gallery-grid module-shot-grid">
+            <figure class="shot wide" data-group="sap" data-img="../images/sap-modulo-lista.png" data-title="Lista de processos SAP">
+              <img src="../images/sap-modulo-lista.png" alt="Lista de processos do Sistema SAP com métricas e tabela" loading="lazy">
+              <figcaption>Lista de processos</figcaption>
+            </figure>
+            <figure class="shot wide" data-group="sap" data-img="../images/sap-modulo-acoes.png" data-title="Ações por processo">
+              <img src="../images/sap-modulo-acoes.png" alt="Menu de ações por processo no Sistema SAP" loading="lazy">
+              <figcaption>Ações por processo</figcaption>
+            </figure>
+            <figure class="shot wide" data-group="sap" data-img="../images/sap-modulo-observacoes.png" data-title="Observações do processo">
+              <img src="../images/sap-modulo-observacoes.png" alt="Modal de observações do processo no Sistema SAP" loading="lazy">
+              <figcaption>Observações</figcaption>
+            </figure>
+            <figure class="shot" data-group="sap" data-img="../images/sap-modulo-filtro.png" data-title="Filtro de processos">
+              <img src="../images/sap-modulo-filtro.png" alt="Filtro aplicado na lista de processos SAP" loading="lazy">
+              <figcaption>Filtro geral</figcaption>
+            </figure>
+            <figure class="shot" data-group="sap" data-img="../images/sap-modulo-colunas.png" data-title="Preferências de colunas">
+              <img src="../images/sap-modulo-colunas.png" alt="Preferências de colunas do Sistema SAP" loading="lazy">
+              <figcaption>Colunas configuráveis</figcaption>
+            </figure>
+            <figure class="shot" data-group="sap" data-img="../images/sap-modulo-concluidos.png" data-title="Processos concluídos">
+              <img src="../images/sap-modulo-concluidos.png" alt="Aba de processos concluídos no Sistema SAP" loading="lazy">
+              <figcaption>Concluídos</figcaption>
+            </figure>
+            <figure class="shot" data-group="sap" data-img="../images/sap-modulo-admin.png" data-title="SAP Admin">
+              <img src="../images/sap-modulo-admin.png" alt="Admin Django do backend do Sistema SAP" loading="lazy">
+              <figcaption>SAP Admin</figcaption>
+            </figure>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <section class="contact" id="contato">
+      <div>
+        <p class="eyebrow">Contato</p>
+        <h2>Tem um processo complicado que precisa virar software?</h2>
+      </div>
+      <div class="contact-links" aria-label="Formas de contato">
+        <a href="https://wa.me/5548999737310" target="_blank" rel="noopener noreferrer">
+          <span>WhatsApp</span>
+          <strong>(48) 99973-7310 ↗</strong>
+        </a>
+        <a href="https://www.linkedin.com/in/luis-felipe-pereira-dos-reis/" target="_blank" rel="noopener noreferrer">
+          <span>LinkedIn</span>
+          <strong>Luis Felipe Reis ↗</strong>
+        </a>
+        <a href="mailto:felipereis068@gmail.com">
+          <span>E-mail</span>
+          <strong>felipereis068@gmail.com ↗</strong>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lightbox-close" type="button" aria-label="Fechar imagem">Fechar</button>
+    <img src="" alt="">
+    <p></p>
+  </div>
+
+  <script src="../assets/portfolio.js"></script>
+</body>
+</html>

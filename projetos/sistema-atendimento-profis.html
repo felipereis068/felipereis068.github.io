@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atendimento Profis | Felipe Reis</title>
+  <meta name="description" content="Duas frentes no mesmo módulo: o Portal público da Dívida Ativa, onde o cidadão consulta débitos inscritos, emite guia de pagamento e encontra requisitos de parcelamento, transação…">
+  <meta property="og:title" content="Atendimento Profis | Felipe Reis">
+  <meta property="og:description" content="Duas frentes no mesmo módulo: o Portal público da Dívida Ativa, onde o cidadão consulta débitos inscritos, emite guia de pagamento e encontra requisitos de parcelamento, transação…">
+  <meta property="og:type" content="article">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/portfolio.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="../" aria-label="Início">
+      <span class="brand-mark">FR.</span>
+      <span>
+        <strong>Felipe Reis</strong>
+        <small>Desenvolvedor de software</small>
+      </span>
+    </a>
+    <nav class="top-nav" aria-label="Navegação principal">
+      <div class="nav-projects">
+        <a class="nav-projects-trigger" href="../#modulos" aria-haspopup="true">
+          Projetos <span aria-hidden="true">↓</span>
+        </a>
+        <div class="projects-menu" aria-label="Lista de projetos">
+          <a href="../projetos/plataforma-pge.html"><span>01</span> Plataforma PGE</a>
+          <a href="../projetos/sistema-sap.html"><span>02</span> Sistema SAP</a>
+          <a href="../projetos/sistema-pareceres.html"><span>03</span> Pareceres</a>
+          <a href="../projetos/sistema-atendimento-profis.html" class="is-current"><span>04</span> Atendimento Profis</a>
+          <a href="../projetos/pareceres-ia.html"><span>05</span> Pareceres IA</a>
+          <a href="../projetos/sistema-cadastro-eventos.html"><span>06</span> Sistema de Cadastro de Eventos</a>
+        </div>
+      </div>
+      <a href="../#sobre">Sobre</a>
+      <a href="../#stack">Stack</a>
+      <a href="../#contato">Contato</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="section project-page">
+      <a class="back-link" href="../#modulos">← Todos os projetos</a>
+      <article class="module-showcase" id="sistema-atendimento-profis">
+        <div class="module-showcase-hero">
+          <div>
+            <p class="module-kicker">Módulo 04</p>
+            <h3>Atendimento Profis</h3>
+            <p>
+              Duas frentes no mesmo módulo: o <strong>Portal público da Dívida Ativa</strong>,
+              onde o cidadão consulta débitos inscritos, emite guia de pagamento e encontra
+              requisitos de parcelamento, transação tributária e legislação; e a
+              <strong>central de atendimento Profis</strong>, que recebe essas solicitações e
+              as conduz por triagem, setores, técnicos, anexos, respostas por portal/e-mail,
+              mensagens internas e monitoramento da equipe. Segue o padrão da Plataforma PGE,
+              com Docker Compose para frontend, backend e banco.
+            </p>
+            <div class="module-actions">
+              <a class="button primary" href="#atendimento-profis-galeria">Ver telas do módulo</a>
+              <a class="button ghost" href="../#stack">Ver stack técnica</a>
+            </div>
+          </div>
+          <figure class="module-cover">
+            <img src="../images/atendimento-profis-modulo-divida-ativa.png" alt="Portal de serviços da Dívida Ativa da PGE-SC" loading="lazy">
+            <figcaption>Portal público da Dívida Ativa: serviços digitais e jornada de regularização.</figcaption>
+          </figure>
+        </div>
+
+        <div class="module-info-grid">
+          <section>
+            <p class="module-kicker">O que entrega</p>
+            <ul class="clean-list">
+              <li>Portal público da Dívida Ativa: consulta de débitos, guia de pagamento e transação tributária</li>
+              <li>Jornada guiada “Consulte → Regularize → Acompanhe” ligada ao canal Profis</li>
+              <li>Páginas de parcelamento e legislações com requisitos e base legal</li>
+              <li>Abertura pública de chamados Profis com documentos e protocolo</li>
+              <li>Fila operacional com status, prioridades, técnicos e setor atual</li>
+              <li>Chat interno flutuante, badges numéricos e alertas sonoros</li>
+              <li>Histórico, anexos, respostas por portal/e-mail e avaliação</li>
+              <li>Monitoramento de técnicos, produtividade e transferência entre setores</li>
+            </ul>
+          </section>
+          <section>
+            <p class="module-kicker">Frontend</p>
+            <div class="tags">
+              <span>Next.js 15.5</span>
+              <span>React 18</span>
+              <span>TypeScript 5</span>
+              <span>Radix UI</span>
+              <span>lucide-react</span>
+              <span>React Hook Form</span>
+              <span>Recharts</span>
+            </div>
+          </section>
+          <section>
+            <p class="module-kicker">Backend e dados</p>
+            <div class="tags">
+              <span>Django</span>
+              <span>Django REST Framework</span>
+              <span>PostgreSQL 16</span>
+              <span>django-auth-ldap</span>
+              <span>Gunicorn</span>
+              <span>WhiteNoise</span>
+            </div>
+          </section>
+          <section>
+            <p class="module-kicker">Integrações e operação</p>
+            <div class="tags">
+              <span>Plataforma SSO</span>
+              <span>Portal Profis</span>
+              <span>Dívida Ativa / SAT</span>
+              <span>Guia de pagamento</span>
+              <span>Transação tributária</span>
+              <span>E-mail/IMAP</span>
+              <span>Anexos</span>
+              <span>Audio messages</span>
+              <span>Docker Compose</span>
+            </div>
+          </section>
+        </div>
+
+        <div class="module-process">
+          <article>
+            <span>Portal da Dívida Ativa</span>
+            <p>Área pública com consulta de débitos no SAT, emissão de guia pelo número da inscrição, parcelamento, transação tributária, certidões e a base legal reunida em <code>legislacoes</code>.</p>
+          </article>
+          <article>
+            <span>Compose de dev</span>
+            <p>Serviços <code>frontend</code>, <code>backend</code> e <code>db</code>, publicados em <code>3010</code>, <code>8010</code> e <code>5445</code>.</p>
+          </article>
+          <article>
+            <span>Fluxo de atendimento</span>
+            <p>O chamado nasce pelo portal, recebe setor/categoria, passa por triagem técnica e mantém histórico, anexos e comunicação com o solicitante.</p>
+          </article>
+          <article>
+            <span>Comunicação interna</span>
+            <p>O backend expõe <code>mensagens-internas</code>, typing status, marcação de leitura e badges para trabalho em equipe.</p>
+          </article>
+        </div>
+
+        <div class="module-gallery" id="atendimento-profis-galeria">
+          <div class="module-gallery-heading">
+            <div>
+              <p class="module-kicker">Galeria do módulo</p>
+              <h3>Telas reais do Portal da Dívida Ativa e da central de atendimento Profis em execução local.</h3>
+            </div>
+            <span>9 telas</span>
+          </div>
+
+          <div class="gallery-grid module-shot-grid">
+            <figure class="shot wide" data-group="atendimento-profis" data-img="../images/atendimento-profis-modulo-lista.png" data-title="Fila operacional">
+              <img src="../images/atendimento-profis-modulo-lista.png" alt="Fila operacional do Atendimento Profis com métricas e chamados" loading="lazy">
+              <figcaption>Fila operacional</figcaption>
+            </figure>
+            <figure class="shot wide" data-group="atendimento-profis" data-img="../images/atendimento-profis-modulo-detalhe.png" data-title="Detalhe do chamado">
+              <img src="../images/atendimento-profis-modulo-detalhe.png" alt="Detalhe de chamado do Atendimento Profis" loading="lazy">
+              <figcaption>Detalhe do chamado</figcaption>
+            </figure>
+            <figure class="shot wide" data-group="atendimento-profis" data-img="../images/atendimento-profis-modulo-chat.png" data-title="Chat interno">
+              <img src="../images/atendimento-profis-modulo-chat.png" alt="Chat interno flutuante do Atendimento Profis" loading="lazy">
+              <figcaption>Chat interno</figcaption>
+            </figure>
+            <figure class="shot" data-group="atendimento-profis" data-img="../images/atendimento-profis-modulo-portal.png" data-title="Portal de abertura">
+              <img src="../images/atendimento-profis-modulo-portal.png" alt="Portal de abertura de chamado Profis" loading="lazy">
+              <figcaption>Portal de abertura</figcaption>
+            </figure>
+            <figure class="shot" data-group="atendimento-profis" data-img="../images/atendimento-profis-modulo-monitoramento.png" data-title="Monitoramento e admin">
+              <img src="../images/atendimento-profis-modulo-monitoramento.png" alt="Monitoramento administrativo do Atendimento Profis" loading="lazy">
+              <figcaption>Monitoramento</figcaption>
+            </figure>
+            <figure class="shot wide" data-group="atendimento-profis" data-img="../images/atendimento-profis-modulo-divida-ativa.png" data-title="Portal da Dívida Ativa">
+              <img src="../images/atendimento-profis-modulo-divida-ativa.png" alt="Portal de serviços da Dívida Ativa da PGE-SC com a jornada Consulte, Regularize e Acompanhe" loading="lazy">
+              <figcaption>Portal da Dívida Ativa e jornada em três etapas</figcaption>
+            </figure>
+            <figure class="shot wide" data-group="atendimento-profis" data-img="../images/atendimento-profis-modulo-legislacoes.png" data-title="Serviços e legislações">
+              <img src="../images/atendimento-profis-modulo-legislacoes.png" alt="Serviços de certidões, protesto e transação tributária com carrossel de legislações" loading="lazy">
+              <figcaption>Serviços em destaque e legislações</figcaption>
+            </figure>
+            <figure class="shot wide" data-group="atendimento-profis" data-img="../images/atendimento-profis-modulo-atendimento-digital.png" data-title="Atendimento Digital Profis">
+              <img src="../images/atendimento-profis-modulo-atendimento-digital.png" alt="Atendimento Digital Profis com opções de solicitar atendimento por chat ou e-mail" loading="lazy">
+              <figcaption>Atendimento digital por chat ou e-mail</figcaption>
+            </figure>
+            <figure class="shot wide" data-group="atendimento-profis" data-img="../images/atendimento-profis-modulo-protocolo-chat.png" data-title="Acompanhamento do protocolo">
+              <img src="../images/atendimento-profis-modulo-protocolo-chat.png" alt="Acompanhamento de protocolo com histórico do chamado, mensagens, anexos e áudio" loading="lazy">
+              <figcaption>Acompanhamento do protocolo pelo cidadão</figcaption>
+            </figure>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <section class="contact" id="contato">
+      <div>
+        <p class="eyebrow">Contato</p>
+        <h2>Tem um processo complicado que precisa virar software?</h2>
+      </div>
+      <div class="contact-links" aria-label="Formas de contato">
+        <a href="https://wa.me/5548999737310" target="_blank" rel="noopener noreferrer">
+          <span>WhatsApp</span>
+          <strong>(48) 99973-7310 ↗</strong>
+        </a>
+        <a href="https://www.linkedin.com/in/luis-felipe-pereira-dos-reis/" target="_blank" rel="noopener noreferrer">
+          <span>LinkedIn</span>
+          <strong>Luis Felipe Reis ↗</strong>
+        </a>
+        <a href="mailto:felipereis068@gmail.com">
+          <span>E-mail</span>
+          <strong>felipereis068@gmail.com ↗</strong>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lightbox-close" type="button" aria-label="Fechar imagem">Fechar</button>
+    <img src="" alt="">
+    <p></p>
+  </div>
+
+  <script src="../assets/portfolio.js"></script>
+</body>
+</html>

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pareceres IA | Felipe Reis</title>
+  <meta name="description" content="Assistente jurídico conversacional (RAG) sobre uma base real de mais de 46 mil pareceres da PGE — cerca de 730 mil trechos indexados. A pessoa pergunta em linguagem natural e recebe…">
+  <meta property="og:title" content="Pareceres IA | Felipe Reis">
+  <meta property="og:description" content="Assistente jurídico conversacional (RAG) sobre uma base real de mais de 46 mil pareceres da PGE — cerca de 730 mil trechos indexados. A pessoa pergunta em linguagem natural e recebe…">
+  <meta property="og:type" content="article">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/portfolio.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="../" aria-label="Início">
+      <span class="brand-mark">FR.</span>
+      <span>
+        <strong>Felipe Reis</strong>
+        <small>Desenvolvedor de software</small>
+      </span>
+    </a>
+    <nav class="top-nav" aria-label="Navegação principal">
+      <div class="nav-projects">
+        <a class="nav-projects-trigger" href="../#modulos" aria-haspopup="true">
+          Projetos <span aria-hidden="true">↓</span>
+        </a>
+        <div class="projects-menu" aria-label="Lista de projetos">
+          <a href="../projetos/plataforma-pge.html"><span>01</span> Plataforma PGE</a>
+          <a href="../projetos/sistema-sap.html"><span>02</span> Sistema SAP</a>
+          <a href="../projetos/sistema-pareceres.html"><span>03</span> Pareceres</a>
+          <a href="../projetos/sistema-atendimento-profis.html"><span>04</span> Atendimento Profis</a>
+          <a href="../projetos/pareceres-ia.html" class="is-current"><span>05</span> Pareceres IA</a>
+          <a href="../projetos/sistema-cadastro-eventos.html"><span>06</span> Sistema de Cadastro de Eventos</a>
+        </div>
+      </div>
+      <a href="../#sobre">Sobre</a>
+      <a href="../#stack">Stack</a>
+      <a href="../#contato">Contato</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="section project-page">
+      <a class="back-link" href="../#modulos">← Todos os projetos</a>
+      <article class="module-showcase" id="pareceres-ia">
+        <div class="module-showcase-hero">
+          <div>
+            <p class="module-kicker">Módulo 05</p>
+            <h3>Pareceres IA</h3>
+            <p>
+              Assistente jurídico conversacional (RAG) sobre uma base real de mais de
+              46 mil pareceres da PGE — cerca de 730 mil trechos indexados. A pessoa pergunta
+              em linguagem natural e recebe uma resposta transmitida em tempo real e
+              fundamentada, com citação verificável do parecer de origem. A busca full-text
+              foi otimizada para responder em menos de 0,5s mesmo nessa escala, e todo o
+              modelo roda localmente com Ollama — API, banco, documentos e inferência no
+              mesmo ambiente Docker, sem enviar dados sensíveis para fora.
+            </p>
+            <div class="module-actions">
+              <a class="button primary" href="#pareceres-ia-galeria">Ver telas do módulo</a>
+              <a class="button ghost" href="../#stack">Ver stack técnica</a>
+            </div>
+          </div>
+          <figure class="module-cover">
+            <img src="../images/pareceres-ia-modulo-chat-resposta.png" alt="Conversa no Pareceres IA com resposta e citação do documento de origem" loading="lazy">
+            <figcaption>Chat em execução com resposta gerada localmente e fonte recuperada da base.</figcaption>
+          </figure>
+        </div>
+
+        <div class="module-info-grid">
+          <section>
+            <p class="module-kicker">O que entrega</p>
+            <ul class="clean-list">
+              <li>Interface de chat responsiva com temas claro e escuro</li>
+              <li>Resposta progressiva via <code>/ask/stream</code> e Server-Sent Events</li>
+              <li>Histórico de conversas persistente, com barra lateral e títulos automáticos</li>
+              <li>Busca insensível a acento e ranqueada por relevância em ~730 mil trechos</li>
+              <li>Ingestão em lote resumível de mais de 46 mil pareceres (Miner/Pareceres)</li>
+              <li>Citações expansíveis com arquivo, trecho e relevância da fonte</li>
+              <li>Backup/restore versionado para migrar a base entre máquinas</li>
+            </ul>
+          </section>
+          <section>
+            <p class="module-kicker">Produto e API</p>
+            <div class="tags">
+              <span>Chat SPA</span>
+              <span>HTML / CSS / JS</span>
+              <span>FastAPI 0.115</span>
+              <span>Uvicorn</span>
+              <span>Pydantic</span>
+              <span>SSE Streaming</span>
+            </div>
+          </section>
+          <section>
+            <p class="module-kicker">Dados e busca</p>
+            <div class="tags">
+              <span>PostgreSQL 16</span>
+              <span>psycopg 3</span>
+              <span>FTS português</span>
+              <span>tsvector + GIN</span>
+              <span>unaccent</span>
+              <span>Busca híbrida AND/OR</span>
+              <span>JSONB</span>
+              <span>MinIO</span>
+            </div>
+          </section>
+          <section>
+            <p class="module-kicker">IA e operação</p>
+            <div class="tags">
+              <span>RAG</span>
+              <span>Ollama</span>
+              <span>Qwen 2.5 (3B)</span>
+              <span>API compatível OpenAI</span>
+              <span>PyMuPDF</span>
+              <span>httpx</span>
+              <span>Pytest</span>
+              <span>Docker Compose</span>
+              <span>Backup / Restore</span>
+            </div>
+          </section>
+        </div>
+
+        <div class="module-process">
+          <article>
+            <span>Ingestão em escala</span>
+            <p>Pipeline resumível que sobe os PDFs ao MinIO, extrai texto com <strong>PyMuPDF</strong> (20–40× mais rápido que a extração anterior) e gera ~730 mil chunks a partir de 46 mil pareceres.</p>
+          </article>
+          <article>
+            <span>Busca em &lt;0,5s</span>
+            <p>Coluna <code>tsvector</code> materializada com índice GIN e estratégia híbrida <em>AND→OR</em> derrubaram a recuperação de dezenas de segundos para menos de meio segundo, com relevância maior.</p>
+          </article>
+          <article>
+            <span>Resposta e memória</span>
+            <p>O Qwen 2.5 sintetiza por streaming usando só os trechos recuperados (com citação verificável), e cada conversa fica salva no histórico — tudo local, sem nuvem externa.</p>
+          </article>
+        </div>
+
+        <div class="module-gallery" id="pareceres-ia-galeria">
+          <div class="module-gallery-heading">
+            <div>
+              <p class="module-kicker">Galeria do módulo</p>
+              <h3>Nova experiência conversacional capturada no ambiente Docker com Ollama e base real.</h3>
+            </div>
+            <span>4 telas</span>
+          </div>
+
+          <div class="gallery-grid module-shot-grid">
+            <figure class="shot wide" data-group="pareceres-ia" data-img="../images/pareceres-ia-modulo-chat-inicial.png" data-title="Início do Pareceres IA">
+              <img src="../images/pareceres-ia-modulo-chat-inicial.png" alt="Tela inicial clara do Pareceres IA com perguntas sugeridas e campo de conversa" loading="lazy">
+              <figcaption>Início e perguntas sugeridas</figcaption>
+            </figure>
+            <figure class="shot wide" data-group="pareceres-ia" data-img="../images/pareceres-ia-modulo-chat-resposta.png" data-title="Resposta com fonte">
+              <img src="../images/pareceres-ia-modulo-chat-resposta.png" alt="Conversa real no Pareceres IA com resposta e trecho de origem expansível" loading="lazy">
+              <figcaption>Resposta gerada e fonte consultada</figcaption>
+            </figure>
+            <figure class="shot wide" data-group="pareceres-ia" data-img="../images/pareceres-ia-modulo-chat-historico.png" data-title="Histórico de conversas">
+              <img src="../images/pareceres-ia-modulo-chat-historico.png" alt="Conversa contínua no Pareceres IA com histórico na barra lateral e perguntas encadeadas" loading="lazy">
+              <figcaption>Histórico e conversa contínua</figcaption>
+            </figure>
+            <figure class="shot wide" data-group="pareceres-ia" data-img="../images/pareceres-ia-modulo-chat-escuro.png" data-title="Tema escuro">
+              <img src="../images/pareceres-ia-modulo-chat-escuro.png" alt="Tela inicial do Pareceres IA no tema escuro com barra lateral de conversas" loading="lazy">
+              <figcaption>Tema escuro</figcaption>
+            </figure>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <section class="contact" id="contato">
+      <div>
+        <p class="eyebrow">Contato</p>
+        <h2>Tem um processo complicado que precisa virar software?</h2>
+      </div>
+      <div class="contact-links" aria-label="Formas de contato">
+        <a href="https://wa.me/5548999737310" target="_blank" rel="noopener noreferrer">
+          <span>WhatsApp</span>
+          <strong>(48) 99973-7310 ↗</strong>
+        </a>
+        <a href="https://www.linkedin.com/in/luis-felipe-pereira-dos-reis/" target="_blank" rel="noopener noreferrer">
+          <span>LinkedIn</span>
+          <strong>Luis Felipe Reis ↗</strong>
+        </a>
+        <a href="mailto:felipereis068@gmail.com">
+          <span>E-mail</span>
+          <strong>felipereis068@gmail.com ↗</strong>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lightbox-close" type="button" aria-label="Fechar imagem">Fechar</button>
+    <img src="" alt="">
+    <p></p>
+  </div>
+
+  <script src="../assets/portfolio.js"></script>
+</body>
+</html>

@@ -349,3 +349,58 @@ section[id], .contact[id], .module-showcase[id] { scroll-margin-top: 90px; }
   .contact { align-items: start; }
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+/* ---- Grid de projetos (home) ---- */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+  margin-top: 48px;
+}
+.project-card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--line);
+  background: var(--white);
+  color: inherit;
+  text-decoration: none;
+  transition: box-shadow .15s ease, transform .15s ease;
+}
+.project-card:hover { box-shadow: 12px 12px 0 var(--soft); transform: translate(-2px, -2px); }
+.project-card figure { margin: 0; border-bottom: 1px solid var(--line); overflow: hidden; }
+.project-card img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  object-position: top left;
+}
+.project-card-body { display: flex; flex-direction: column; gap: 10px; flex: 1; padding: 22px 24px 24px; }
+.project-card-body h3 { margin: 0; font-size: 21px; }
+.project-card-body p { margin: 0; color: var(--muted); font-size: 14px; line-height: 1.55; }
+.project-card-cta {
+  margin-top: auto;
+  padding-top: 14px;
+  color: var(--accent);
+  font: 500 11px/1 "IBM Plex Mono", monospace;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+/* ---- Paginas internas de projeto ---- */
+.project-page { padding-top: 34px; }
+.back-link {
+  display: inline-block;
+  margin-bottom: 26px;
+  color: var(--muted);
+  font: 500 11px/1 "IBM Plex Mono", monospace;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.back-link:hover { color: var(--accent); }
+.projects-menu a.is-current { color: var(--accent); }
+
+@media (max-width: 720px) {
+  .project-grid { grid-template-columns: 1fr; gap: 22px; margin-top: 32px; }
+}

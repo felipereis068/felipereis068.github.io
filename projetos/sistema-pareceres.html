@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pareceres | Felipe Reis</title>
+  <meta name="description" content="Sistema jurídico para consulta, cadastro, gestão e publicação de pareceres, com leitura de PDFs, metadados de processo, sigilo, assinatura, superação de pareceres, integração com SGPe…">
+  <meta property="og:title" content="Pareceres | Felipe Reis">
+  <meta property="og:description" content="Sistema jurídico para consulta, cadastro, gestão e publicação de pareceres, com leitura de PDFs, metadados de processo, sigilo, assinatura, superação de pareceres, integração com SGPe…">
+  <meta property="og:type" content="article">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/portfolio.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="../" aria-label="Início">
+      <span class="brand-mark">FR.</span>
+      <span>
+        <strong>Felipe Reis</strong>
+        <small>Desenvolvedor de software</small>
+      </span>
+    </a>
+    <nav class="top-nav" aria-label="Navegação principal">
+      <div class="nav-projects">
+        <a class="nav-projects-trigger" href="../#modulos" aria-haspopup="true">
+          Projetos <span aria-hidden="true">↓</span>
+        </a>
+        <div class="projects-menu" aria-label="Lista de projetos">
+          <a href="../projetos/plataforma-pge.html"><span>01</span> Plataforma PGE</a>
+          <a href="../projetos/sistema-sap.html"><span>02</span> Sistema SAP</a>
+          <a href="../projetos/sistema-pareceres.html" class="is-current"><span>03</span> Pareceres</a>
+          <a href="../projetos/sistema-atendimento-profis.html"><span>04</span> Atendimento Profis</a>
+          <a href="../projetos/pareceres-ia.html"><span>05</span> Pareceres IA</a>
+          <a href="../projetos/sistema-cadastro-eventos.html"><span>06</span> Sistema de Cadastro de Eventos</a>
+        </div>
+      </div>
+      <a href="../#sobre">Sobre</a>
+      <a href="../#stack">Stack</a>
+      <a href="../#contato">Contato</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="section project-page">
+      <a class="back-link" href="../#modulos">← Todos os projetos</a>
+      <article class="module-showcase" id="sistema-pareceres">
+        <div class="module-showcase-hero">
+          <div>
+            <p class="module-kicker">Módulo 03</p>
+            <h3>Pareceres</h3>
+            <p>
+              Sistema jurídico para consulta, cadastro, gestão e publicação de pareceres,
+              com leitura de PDFs, metadados de processo, sigilo, assinatura, superação de
+              pareceres, integração com SGPe e rotinas mineradoras. O mesmo backend também
+              sustenta Atos Normativos, Despacho Jurídico, Petição Inicial, Corregedoria e
+              fluxos de dispensa de recursos.
+            </p>
+            <div class="module-actions">
+              <a class="button primary" href="#pareceres-galeria">Ver telas do módulo</a>
+              <a class="button ghost" href="../#stack">Ver stack técnica</a>
+            </div>
+          </div>
+          <figure class="module-cover">
+            <img src="../images/pareceres-modulo-lista.png" alt="Lista de pareceres com filtros e resultados no PGE Miner" loading="lazy">
+            <figcaption>Lista de pareceres com filtros, paginação, ações SGPe e documentos reais do ambiente local.</figcaption>
+          </figure>
+        </div>
+
+        <div class="module-info-grid">
+          <section>
+            <p class="module-kicker">O que entrega</p>
+            <ul class="clean-list">
+              <li>Consulta e filtros de pareceres com busca textual e metadados jurídicos</li>
+              <li>Cadastro e edição com documentos, assinatura, sigilo, status e ementa</li>
+              <li>Visualização de PDF, peças SGPe, pareceres superados e histórico</li>
+              <li>Atos Normativos, Despacho Jurídico, Petição Inicial e Corregedoria</li>
+              <li>Rotinas de mineração para SGPe, Drive PGE, SAJ e dispensa de recursos</li>
+            </ul>
+          </section>
+          <section>
+            <p class="module-kicker">Frontend</p>
+            <div class="tags">
+              <span>Next.js 13</span>
+              <span>React 18</span>
+              <span>TypeScript 5</span>
+              <span>Chakra UI</span>
+              <span>React Table</span>
+              <span>PDF Viewer</span>
+              <span>CKEditor</span>
+            </div>
+          </section>
+          <section>
+            <p class="module-kicker">Backend e busca</p>
+            <div class="tags">
+              <span>Django 3.2</span>
+              <span>DRF</span>
+              <span>PostgreSQL</span>
+              <span>Elasticsearch 7</span>
+              <span>SimpleJWT</span>
+              <span>django-filter</span>
+            </div>
+          </section>
+          <section>
+            <p class="module-kicker">Documentos e integrações</p>
+            <div class="tags">
+              <span>SGPe SOAP/Zeep</span>
+              <span>Boa Vista</span>
+              <span>Google Drive</span>
+              <span>OCR</span>
+              <span>PDF/Word</span>
+              <span>LDAP</span>
+              <span>MinIO</span>
+            </div>
+          </section>
+        </div>
+
+        <div class="module-process">
+          <article>
+            <span>Acesso institucional</span>
+            <p>A entrada passa pela Plataforma, com login institucional e encaminhamento para o módulo protegido de pareceres.</p>
+          </article>
+          <article>
+            <span>Pipeline de dados</span>
+            <p>Jobs importam documentos do SGPe, Drive PGE, SAJ e bases externas, alimentando PostgreSQL e índices Elasticsearch.</p>
+          </article>
+          <article>
+            <span>Controle jurídico</span>
+            <p>O backend aplica status, sigilo, permissões de edição/exclusão, assinatura e vínculos entre pareceres.</p>
+          </article>
+        </div>
+
+        <div class="module-gallery" id="pareceres-galeria">
+          <div class="module-gallery-heading">
+            <div>
+              <p class="module-kicker">Galeria do módulo</p>
+              <h3>Telas internas do Pareceres logado: consulta, busca, cadastro, documento, peças SGPe e dados do processo.</h3>
+            </div>
+            <span>6 telas</span>
+          </div>
+
+          <div class="gallery-grid module-shot-grid">
+            <figure class="shot wide" data-group="pareceres" data-img="../images/pareceres-modulo-lista.png" data-title="Lista e filtros de pareceres">
+              <img src="../images/pareceres-modulo-lista.png" alt="Lista de pareceres com filtros, paginação e ações do SGPe" loading="lazy">
+              <figcaption>Lista e filtros</figcaption>
+            </figure>
+            <figure class="shot" data-group="pareceres" data-img="../images/pareceres-modulo-busca.png" data-title="Busca textual em pareceres">
+              <img src="../images/pareceres-modulo-busca.png" alt="Busca por contrato retornando parecer filtrado" loading="lazy">
+              <figcaption>Busca textual</figcaption>
+            </figure>
+            <figure class="shot" data-group="pareceres" data-img="../images/pareceres-modulo-cadastro.png" data-title="Cadastro de pareceres">
+              <img src="../images/pareceres-modulo-cadastro.png" alt="Formulário de cadastro de parecer com metadados, upload e editores" loading="lazy">
+              <figcaption>Cadastro</figcaption>
+            </figure>
+            <figure class="shot wide" data-group="pareceres" data-img="../images/pareceres-modulo-detalhe.png" data-title="Visualização do documento">
+              <img src="../images/pareceres-modulo-detalhe.png" alt="Visualização de parecer com PDF, peças do SGPe e dados do processo" loading="lazy">
+              <figcaption>Documento/PDF</figcaption>
+            </figure>
+            <figure class="shot" data-group="pareceres" data-img="../images/pareceres-modulo-pecas-sgpe.png" data-title="Peças do SGPe">
+              <img src="../images/pareceres-modulo-pecas-sgpe.png" alt="Aba de peças do SGPe na visualização do parecer" loading="lazy">
+              <figcaption>Peças SGPe</figcaption>
+            </figure>
+            <figure class="shot wide" data-group="pareceres" data-img="../images/pareceres-modulo-dados-processo.png" data-title="Dados do processo">
+              <img src="../images/pareceres-modulo-dados-processo.png" alt="Aba de dados do processo na visualização do parecer" loading="lazy">
+              <figcaption>Dados do processo</figcaption>
+            </figure>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <section class="contact" id="contato">
+      <div>
+        <p class="eyebrow">Contato</p>
+        <h2>Tem um processo complicado que precisa virar software?</h2>
+      </div>
+      <div class="contact-links" aria-label="Formas de contato">
+        <a href="https://wa.me/5548999737310" target="_blank" rel="noopener noreferrer">
+          <span>WhatsApp</span>
+          <strong>(48) 99973-7310 ↗</strong>
+        </a>
+        <a href="https://www.linkedin.com/in/luis-felipe-pereira-dos-reis/" target="_blank" rel="noopener noreferrer">
+          <span>LinkedIn</span>
+          <strong>Luis Felipe Reis ↗</strong>
+        </a>
+        <a href="mailto:felipereis068@gmail.com">
+          <span>E-mail</span>
+          <strong>felipereis068@gmail.com ↗</strong>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lightbox-close" type="button" aria-label="Fechar imagem">Fechar</button>
+    <img src="" alt="">
+    <p></p>
+  </div>
+
+  <script src="../assets/portfolio.js"></script>
+</body>
+</html>

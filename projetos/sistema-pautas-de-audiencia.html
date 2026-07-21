@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pautas de Audiência | Felipe Reis</title>
+  <meta name="description" content="Consolida as pautas de julgamento dos órgãos julgadores num calendário único. O sistema importa sessões, processos, partes e assuntos direto do tribunal por webservice SOAP, organiza…">
+  <meta property="og:title" content="Pautas de Audiência | Felipe Reis">
+  <meta property="og:description" content="Consolida as pautas de julgamento dos órgãos julgadores num calendário único. O sistema importa sessões, processos, partes e assuntos direto do tribunal por webservice SOAP, organiza…">
+  <meta property="og:type" content="article">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/portfolio.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="../" aria-label="Início">
+      <span class="brand-mark">FR.</span>
+      <span>
+        <strong>Felipe Reis</strong>
+        <small>Desenvolvedor de software</small>
+      </span>
+    </a>
+    <nav class="top-nav" aria-label="Navegação principal">
+      <div class="nav-projects">
+        <a class="nav-projects-trigger" href="../#modulos" aria-haspopup="true">
+          Projetos <span aria-hidden="true">↓</span>
+        </a>
+        <div class="projects-menu" aria-label="Lista de projetos">
+          <a href="../projetos/plataforma-pge.html"><span>01</span> Plataforma PGE</a>
+          <a href="../projetos/sistema-sap.html"><span>02</span> Sistema SAP</a>
+          <a href="../projetos/sistema-pareceres.html"><span>03</span> Pareceres</a>
+          <a href="../projetos/sistema-atendimento-profis.html"><span>04</span> Atendimento Profis</a>
+          <a href="../projetos/pareceres-ia.html"><span>05</span> Pareceres IA</a>
+          <a href="../projetos/sistema-cadastro-eventos.html"><span>06</span> Cadastro de Eventos</a>
+          <a href="../projetos/sistema-pautas-de-audiencia.html" class="is-current"><span>07</span> Pautas de Audiência</a>
+        </div>
+      </div>
+      <a href="../#sobre">Sobre</a>
+      <a href="../#stack">Stack</a>
+      <a href="../#contato">Contato</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="section project-page">
+      <a class="back-link" href="../#modulos">← Todos os projetos</a>
+      <article class="module-showcase" id="sistema-pautas-de-audiencia">
+        <div class="module-showcase-hero">
+          <div>
+            <p class="module-kicker">Módulo 07</p>
+            <h3>Pautas de Audiência</h3>
+            <p>
+              Consolida as pautas de julgamento dos órgãos julgadores num calendário único.
+              O sistema importa sessões, processos, partes e assuntos direto do tribunal por
+              webservice SOAP, organiza tudo por câmara, relator, assunto e data, e permite
+              localizar um processo específico com sua classe, situação, tipo de sessão e o
+              quadro completo de partes — substituindo a conferência manual de pautas
+              publicadas.
+            </p>
+            <div class="module-actions">
+              <a class="button primary" href="#pautas-audiencia-galeria">Ver telas do módulo</a>
+              <a class="button ghost" href="../#stack">Ver stack técnica</a>
+            </div>
+          </div>
+          <figure class="module-cover">
+            <img src="../images/pautas-audiencia-modulo-calendario.png" alt="Calendário de sessões das pautas de audiência com legenda por órgão julgador" loading="lazy">
+            <figcaption>Calendário de sessões com legenda por órgão julgador e contagem de processos.</figcaption>
+          </figure>
+        </div>
+
+        <div class="module-info-grid">
+          <section>
+            <p class="module-kicker">O que entrega</p>
+            <ul class="clean-list">
+              <li>Calendário de sessões com marcação colorida por órgão julgador</li>
+              <li>Pautas agrupadas por câmara, com contagem e expansão sob demanda</li>
+              <li>Busca por número de processo e filtros de data, órgão, relator e assunto</li>
+              <li>Detalhe do processo com classe, situação, tipo de sessão e assunto principal</li>
+              <li>Quadro de partes: apelantes, apelados e terceiros com documentos</li>
+              <li>Importação automática das pautas publicadas pelo tribunal</li>
+            </ul>
+          </section>
+          <section>
+            <p class="module-kicker">Frontend</p>
+            <div class="tags">
+              <span>Next.js</span>
+              <span>React</span>
+              <span>TypeScript</span>
+              <span>Radix UI</span>
+              <span>react-day-picker</span>
+              <span>date-fns</span>
+              <span>lucide-react</span>
+            </div>
+          </section>
+          <section>
+            <p class="module-kicker">Backend e dados</p>
+            <div class="tags">
+              <span>Django 5</span>
+              <span>Django REST Framework</span>
+              <span>PostgreSQL</span>
+              <span>dj-database-url</span>
+              <span>Gunicorn</span>
+            </div>
+          </section>
+          <section>
+            <p class="module-kicker">Integrações e operação</p>
+            <div class="tags">
+              <span>Webservice SOAP (zeep)</span>
+              <span>xmltodict</span>
+              <span>BeautifulSoup</span>
+              <span>requests</span>
+              <span>Plataforma SSO</span>
+              <span>Docker Compose</span>
+            </div>
+          </section>
+        </div>
+
+        <div class="module-process">
+          <article>
+            <span>Integração com o tribunal</span>
+            <p>Cliente SOAP em <code>zeep</code> com <code>xmltodict</code> e <code>BeautifulSoup</code> importa sessões, processos, partes e assuntos; cada carga fica registrada em <code>DocumentoImportacao</code>.</p>
+          </article>
+          <article>
+            <span>Modelo do domínio</span>
+            <p>Pauta, Sessão, Processo, Magistrado, Relator, Órgão julgador, Assunto, Classe e Parte — o suficiente para reconstruir a pauta completa e cruzar por qualquer eixo.</p>
+          </article>
+          <article>
+            <span>SSO e compose</span>
+            <p>Sem login próprio: a sessão vem da Plataforma PGE. Em desenvolvimento, <code>frontend</code>, <code>backend</code> e <code>db</code> sobem em <code>3003</code>, <code>8003</code> e <code>5435</code>.</p>
+          </article>
+        </div>
+
+        <div class="module-gallery" id="pautas-audiencia-galeria">
+          <div class="module-gallery-heading">
+            <div>
+              <p class="module-kicker">Galeria do módulo</p>
+              <h3>Telas reais do sistema com as pautas importadas do tribunal.</h3>
+            </div>
+            <span>2 telas</span>
+          </div>
+
+          <div class="gallery-grid module-shot-grid">
+            <figure class="shot wide" data-group="pautas-audiencia" data-img="../images/pautas-audiencia-modulo-calendario.png" data-title="Calendário de sessões">
+              <img src="../images/pautas-audiencia-modulo-calendario.png" alt="Calendário de sessões com legenda por órgão julgador e pautas por câmara" loading="lazy">
+              <figcaption>Calendário e pautas por órgão julgador</figcaption>
+            </figure>
+            <figure class="shot wide" data-group="pautas-audiencia" data-img="../images/pautas-audiencia-modulo-detalhe.png" data-title="Detalhe do processo">
+              <img src="../images/pautas-audiencia-modulo-detalhe.png" alt="Detalhe do processo com relator, órgão julgador, tipo de sessão, assunto e partes" loading="lazy">
+              <figcaption>Detalhe do processo, filtros avançados e partes</figcaption>
+            </figure>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <section class="contact" id="contato">
+      <div>
+        <p class="eyebrow">Contato</p>
+        <h2>Tem um processo complicado que precisa virar software?</h2>
+      </div>
+      <div class="contact-links" aria-label="Formas de contato">
+        <a href="https://wa.me/5548999737310" target="_blank" rel="noopener noreferrer">
+          <span>WhatsApp</span>
+          <strong>(48) 99973-7310 ↗</strong>
+        </a>
+        <a href="https://www.linkedin.com/in/luis-felipe-pereira-dos-reis/" target="_blank" rel="noopener noreferrer">
+          <span>LinkedIn</span>
+          <strong>Luis Felipe Reis ↗</strong>
+        </a>
+        <a href="mailto:felipereis068@gmail.com">
+          <span>E-mail</span>
+          <strong>felipereis068@gmail.com ↗</strong>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lightbox-close" type="button" aria-label="Fechar imagem">Fechar</button>
+    <img src="" alt="">
+    <p></p>
+  </div>
+
+  <script src="../assets/portfolio.js"></script>
+</body>
+</html>

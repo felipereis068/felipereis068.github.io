@@ -1,12 +1,12 @@
 :root {
-  --paper: #f2f0ea;
+  --paper: #ffffff;
   --ink: #171714;
-  --muted: #68675f;
-  --line: #cbc8be;
-  --soft: #e8e5dc;
+  --muted: #5f6368;
+  --line: #d9d9d9;
+  --soft: #f2f3f5;
   --accent: #e44d2e;
   --dark: #1d211f;
-  --white: #faf9f5;
+  --white: #ffffff;
 }
 
 * { box-sizing: border-box; }
@@ -38,7 +38,7 @@ code {
   min-height: 76px;
   padding: 12px max(24px, 5vw);
   border-bottom: 1px solid var(--line);
-  background: rgba(242, 240, 234, .94);
+  background: rgba(255, 255, 255, .94);
   backdrop-filter: blur(12px);
 }
 .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; }

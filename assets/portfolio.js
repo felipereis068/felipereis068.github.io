@@ -61,6 +61,7 @@ const translations = {
   "Implementação": "Implementation",
   "Resultado": "Outcome",
   "Galeria": "Gallery",
+  "Aviso: os dados apresentados neste portfólio são públicos.": "Notice: the data presented in this portfolio is publicly available.",
   "Fechar": "Close"
 };
 
